@@ -11,7 +11,7 @@ app_license = "MIT"
 # ------------------
 
 # include js, css files in header of desk.html
-app_include_css = "/assets/gymmgt/css/gymmgt_theme.css"
+app_include_css = "/assets/gymmgt/css/gymmgt_desk.css"
 # app_include_js = "/assets/gymmgt/js/gymmgt.js"
 
 required_apps = ["erpnext"]
