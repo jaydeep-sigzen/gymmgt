@@ -1,0 +1,70 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{##}",
+ "creation": "2023-04-21 11:38:27.894432",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "meals",
+  "fat_gms",
+  "carbohydrate_gms",
+  "protein_gms",
+  "calories_gms",
+  "qty_gms",
+  "meal_intervals"
+ ],
+ "fields": [
+  {
+   "fieldname": "meals",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Meals",
+   "reqd": 1
+  },
+  {
+   "fieldname": "fat_gms",
+   "fieldtype": "Data",
+   "label": "Fat (gms)"
+  },
+  {
+   "fieldname": "carbohydrate_gms",
+   "fieldtype": "Data",
+   "label": "Carbohydrate (gms) "
+  },
+  {
+   "fieldname": "protein_gms",
+   "fieldtype": "Data",
+   "label": "Protein (gms)"
+  },
+  {
+   "fieldname": "calories_gms",
+   "fieldtype": "Data",
+   "label": "Calories (gms)"
+  },
+  {
+   "fieldname": "qty_gms",
+   "fieldtype": "Data",
+   "label": "Qty (gms)"
+  },
+  {
+   "fieldname": "meal_intervals",
+   "fieldtype": "Data",
+   "label": "Meal Intervals"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-04-21 11:38:27.894432",
+ "modified_by": "Administrator",
+ "module": "Gym Management",
+ "name": "Diet Plan Details",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
