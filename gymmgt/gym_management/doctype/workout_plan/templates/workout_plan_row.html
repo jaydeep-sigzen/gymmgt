@@ -1,4 +1,12 @@
 <div>
-	<a href="{{ doc.route }}">{{ doc.title or doc.name }}</a>
+	<!-- <a href="{{ doc.route }}">{{ doc.title or doc.name }}</a> -->
+
+	<div class="card" style="width: 18rem;">
+		<h4 class="card-title">{{ doc.plan_name }}</h4>
+		<img class="card-img-top" src="{{ doc.image}}" alt="Card image">
+		<div class="card-body">
+
+			<a href="{{doc.route}}" class="btn btn-primary">See Plan</a>
+		</div>
+	</div>
 </div>
-<!-- this is a sample default list template -->
