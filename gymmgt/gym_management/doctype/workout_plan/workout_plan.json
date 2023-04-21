@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:plan_name",
+ "autoname": "format:{plan_name}-{##}",
  "creation": "2023-04-20 01:04:11.186276",
  "default_view": "List",
  "doctype": "DocType",
@@ -9,10 +9,11 @@
  "engine": "InnoDB",
  "field_order": [
   "plan_name",
-  "description",
+  "column_break_toepm",
   "image",
-  "exercise_details_section",
-  "exercise"
+  "section_break_ndecw",
+  "description",
+  "route"
  ],
  "fields": [
   {
@@ -24,35 +25,38 @@
    "unique": 1
   },
   {
-   "fieldname": "exercise",
-   "fieldtype": "Table",
-   "label": "Exercise ",
-   "options": "Exercise",
-   "reqd": 1
-  },
-  {
    "fieldname": "description",
-   "fieldtype": "Data",
+   "fieldtype": "Small Text",
    "label": "Description"
   },
   {
    "fieldname": "image",
    "fieldtype": "Attach Image",
-   "label": "Image"
+   "label": "Image",
+   "reqd": 1
   },
   {
-   "fieldname": "exercise_details_section",
-   "fieldtype": "Section Break",
-   "label": "Exercise Details"
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route"
+  },
+  {
+   "fieldname": "column_break_toepm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_ndecw",
+   "fieldtype": "Section Break"
   }
  ],
+ "has_web_view": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-04-20 15:48:54.496425",
+ "modified": "2023-04-21 02:01:24.211189",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Workout Plan",
- "naming_rule": "By fieldname",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
@@ -68,6 +72,7 @@
    "write": 1
   }
  ],
+ "route": "plans",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []

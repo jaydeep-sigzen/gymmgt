@@ -8,7 +8,8 @@
  "field_order": [
   "exercise_name",
   "sets",
-  "reps"
+  "reps",
+  "body_part"
  ],
  "fields": [
   {
@@ -31,12 +32,18 @@
    "in_list_view": 1,
    "label": "Reps",
    "reqd": 1
+  },
+  {
+   "fieldname": "body_part",
+   "fieldtype": "Link",
+   "label": "Body Part",
+   "options": "Body Part"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-04-20 01:01:44.350037",
+ "modified": "2023-04-21 00:53:34.020944",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Exercise",

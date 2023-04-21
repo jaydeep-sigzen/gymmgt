@@ -1,0 +1,66 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-04-21 01:44:35.607072",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "add_customer_to_gym_member",
+  "section_break_kffhw",
+  "registration_fee",
+  "column_break_zggqj",
+  "default_days"
+ ],
+ "fields": [
+  {
+   "fieldname": "registration_fee",
+   "fieldtype": "Currency",
+   "label": "Registration Fee"
+  },
+  {
+   "fieldname": "default_days",
+   "fieldtype": "Data",
+   "label": "Default Days"
+  },
+  {
+   "default": "0",
+   "fieldname": "add_customer_to_gym_member",
+   "fieldtype": "Check",
+   "label": "Add Customer to Gym Member"
+  },
+  {
+   "fieldname": "column_break_zggqj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_kffhw",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2023-04-21 11:12:32.349545",
+ "modified_by": "Administrator",
+ "module": "Gym Management",
+ "name": "Gym Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
