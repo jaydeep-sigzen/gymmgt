@@ -49,6 +49,7 @@
    "reqd": 1
   },
   {
+   "default": "Today",
    "fieldname": "joining_date",
    "fieldtype": "Date",
    "in_list_view": 1,
@@ -117,7 +118,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-04-21 17:48:34.085055",
+ "modified": "2023-04-21 21:28:35.548694",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gym Member",
