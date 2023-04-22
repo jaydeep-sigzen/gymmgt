@@ -111,6 +111,12 @@ home_page = "home"
 # "on_trash": "method"
 # }
 # }
+fixtures = [
+    {'dt': "Web Page"},
+    {'dt': "Website Settings"},
+    {'dt': "Website Theme"},
+    {'dt': "Color"}
+]
 
 # Scheduled Tasks
 # ---------------
