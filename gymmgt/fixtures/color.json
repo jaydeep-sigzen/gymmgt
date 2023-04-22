@@ -3,7 +3,7 @@
   "color": "#0A4D68",
   "docstatus": 0,
   "doctype": "Color",
-  "modified": "2023-04-22 11:52:30.825548",
+  "modified": "2023-04-22 16:46:54.381379",
   "name": "Primary Color"
  },
  {
@@ -17,7 +17,7 @@
   "color": "#05BFDB",
   "docstatus": 0,
   "doctype": "Color",
-  "modified": "2023-04-22 11:53:47.576208",
+  "modified": "2023-04-22 16:47:12.352852",
   "name": "Light Color"
  },
  {
@@ -26,13 +26,6 @@
   "doctype": "Color",
   "modified": "2023-04-22 11:54:41.776957",
   "name": "Dark Color"
- },
- {
-  "color": "#ffffff",
-  "docstatus": 0,
-  "doctype": "Color",
-  "modified": "2023-04-22 12:28:29.436968",
-  "name": "BG Color"
  },
  {
   "color": "#ffffff",

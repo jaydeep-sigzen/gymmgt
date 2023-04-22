@@ -85,69 +85,6 @@
 }
 
 
-/*****  OVERRIDDEN CSS  *****/
-
-/* Heading Text Color */
-/*
-.page-head{
-    background: #7C7BAD !important;
-    background: #7C7BAD !important;
-}
-.page-container{
-    background: url(/web_responsive/static/src/css/../img/home-menu-bg-overlay.svg), linear-gradient(to bottom, #7C7BAD, #c3c2cc); !important;
-    background-color: url(/web_responsive/static/src/css/../img/home-menu-bg-overlay.svg), linear-gradient(to bottom, #7C7BAD, #c3c2cc); !important;
-}
-h3.ellipsis.title-text,
-.widget-group .widget-group-head .widget-group-title,
-.layout-side-section .sidebar-label{
-    color: white !important;
-}
-
-*/
-/* Form Input Focus */
-/*
-
-input:focus{
-    border: 1px solid #7C7BAD !important;
-}
-.form-control:focus{
-    box-shadow: 0 0 0 2px rgba(94, 108, 162, 0.25) !important;
-}
-
-*/
-/* Div Padding */
-/*
-
-.widget.widget-shadow.shortcut-widget-box{
-    padding: 5px 10px;
-}
-
-*/
-/* List Design */
-/*
-
-.indicator-pill, .indicator-pill-right{
-    padding: 7px 8px;
-    height: unset;
-}
-
-*/
-/* Collapse Div Padding */
-/*
-
-.section-head.collapsed{
-    padding: 2px 4px;
-}
-
-*/
-/* Dropdown List Hover */
-/*
-
-.awesomplete > ul > li:hover, .awesomplete > ul > li[aria-selected="true"]{
-    background-color: #a492bf;
-}*/
-
-
 
 
 
@@ -365,33 +302,6 @@ symbol#icon-small-down {
 .datatable .dt-header .dt-cell--header .dt-cell__content {
     background-color: #f4f4f4;
 }
-
-
-/* Buttons CSS
-.filter-button,
-.sort-selector-button,
-.btn-order{
-    background-color: #ea7272 !important;
-    color: var(--white-color) !important;
-    transition: 0.3s;
-    border-radius: 0 !important;
-}
-.filter-button:hover,
-.sort-selector-button:hover,
-.btn-order:hover{
-    background-color: #c83b3b !important;
-}
-.filter-button span.filter-icon{
-    color: var(--white-color);
-}
-.filter-button span.filter-icon svg.icon{
-    stroke: var(--white-color);
-} */
-
-
-
-/* White Label Changes */
-
 
 /* Hide show help menu */
 li.dropdown.dropdown.dropdown-help.dropdown-mobile {

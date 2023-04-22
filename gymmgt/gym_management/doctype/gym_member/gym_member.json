@@ -23,7 +23,8 @@
   "section_break_gmptf",
   "section_break_yxytp",
   "email_id",
-  "address"
+  "address",
+  "amended_from"
  ],
  "fields": [
   {
@@ -114,11 +115,21 @@
   {
    "fieldname": "section_break_cxfhb",
    "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Gym Member",
+   "print_hide": 1,
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2023-04-22 00:08:46.266002",
+ "modified": "2023-04-22 18:26:57.943747",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gym Member",
