@@ -40,7 +40,7 @@ web_include_css = "/assets/gymmgt/css/gymmgt_web.css"
 # ----------
 
 # application home page (will override Website Settings)
-# home_page = "home"
+home_page = "home"
 
 # website user home page (by Role)
 # role_home_page = {
