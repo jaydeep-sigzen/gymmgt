@@ -1,0 +1,16 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+
+<div class="container">
+    <h4>{{ plan_name }} </h4>
+</div>
+<img class="rounded mx-auto d-block" src="{{ image }}" title="{{ plan_name }}" alt="{{ plan_name}}">
+
+<div class="container">
+    <h4> Description : </h4>{{description }}
+</div>
+<div class="mt-5">
+    <a class="btn btn-primary" href="/{{ route }}/subscribe">Subscribe</a>
+</div>
+{% endblock %}

@@ -1,7 +1,7 @@
 from . import __version__ as app_version
 
 app_name = "gymmgt"
-app_title = "Gym Managment"
+app_title = "Gym Management"
 app_publisher = "Jaydeep-Sigzen"
 app_description = "A gym management system is a software application designed to help gym owners and managers streamline their operations and manage day-to-day tasks. This may include things like membership management, scheduling, billing and payments, facility and equipment management, and reporting and analytics."
 app_email = "jaydeep@sigzen.com"
@@ -11,11 +11,13 @@ app_license = "MIT"
 # ------------------
 
 # include js, css files in header of desk.html
-# app_include_css = "/assets/gymmgt/css/gymmgt.css"
+app_include_css = "/assets/gymmgt/css/gymmgt_desk.css"
 # app_include_js = "/assets/gymmgt/js/gymmgt.js"
 
+required_apps = ["erpnext"]
+
 # include js, css files in header of web template
-# web_include_css = "/assets/gymmgt/css/gymmgt.css"
+web_include_css = "/assets/gymmgt/css/gymmgt_web.css"
 # web_include_js = "/assets/gymmgt/js/gymmgt.js"
 
 # include custom scss in every website theme (without file extension ".scss")
@@ -38,11 +40,11 @@ app_license = "MIT"
 # ----------
 
 # application home page (will override Website Settings)
-# home_page = "login"
+home_page = "home"
 
 # website user home page (by Role)
 # role_home_page = {
-#	"Role": "home_page"
+# "Role": "home_page"
 # }
 
 # Generators
@@ -56,8 +58,8 @@ app_license = "MIT"
 
 # add methods and filters to jinja environment
 # jinja = {
-#	"methods": "gymmgt.utils.jinja_methods",
-#	"filters": "gymmgt.utils.jinja_filters"
+# "methods": "gymmgt.utils.jinja_methods",
+# "filters": "gymmgt.utils.jinja_filters"
 # }
 
 # Installation
@@ -83,11 +85,11 @@ app_license = "MIT"
 # Permissions evaluated in scripted ways
 
 # permission_query_conditions = {
-#	"Event": "frappe.desk.doctype.event.event.get_permission_query_conditions",
+# "Event": "frappe.desk.doctype.event.event.get_permission_query_conditions",
 # }
 #
 # has_permission = {
-#	"Event": "frappe.desk.doctype.event.event.has_permission",
+# "Event": "frappe.desk.doctype.event.event.has_permission",
 # }
 
 # DocType Class
@@ -95,7 +97,7 @@ app_license = "MIT"
 # Override standard doctype classes
 
 # override_doctype_class = {
-#	"ToDo": "custom_app.overrides.CustomToDo"
+# "ToDo": "custom_app.overrides.CustomToDo"
 # }
 
 # Document Events
@@ -103,32 +105,38 @@ app_license = "MIT"
 # Hook on document methods and events
 
 # doc_events = {
-#	"*": {
-#		"on_update": "method",
-#		"on_cancel": "method",
-#		"on_trash": "method"
-#	}
+# "*": {
+# "on_update": "method",
+# "on_cancel": "method",
+# "on_trash": "method"
 # }
+# }
+fixtures = [
+    {'dt': "Web Page"},
+    {'dt': "Website Settings"},
+    {'dt': "Website Theme"},
+    {'dt': "Color"}
+]
 
 # Scheduled Tasks
 # ---------------
 
 # scheduler_events = {
-#	"all": [
-#		"gymmgt.tasks.all"
-#	],
-#	"daily": [
-#		"gymmgt.tasks.daily"
-#	],
-#	"hourly": [
-#		"gymmgt.tasks.hourly"
-#	],
-#	"weekly": [
-#		"gymmgt.tasks.weekly"
-#	],
-#	"monthly": [
-#		"gymmgt.tasks.monthly"
-#	],
+# "all": [
+# "gymmgt.tasks.all"
+# ],
+# "daily": [
+# "gymmgt.tasks.daily"
+# ],
+# "hourly": [
+# "gymmgt.tasks.hourly"
+# ],
+# "weekly": [
+# "gymmgt.tasks.weekly"
+# ],
+# "monthly": [
+# "gymmgt.tasks.monthly"
+# ],
 # }
 
 # Testing
@@ -140,14 +148,14 @@ app_license = "MIT"
 # ------------------------------
 #
 # override_whitelisted_methods = {
-#	"frappe.desk.doctype.event.event.get_events": "gymmgt.event.get_events"
+# "frappe.desk.doctype.event.event.get_events": "gymmgt.event.get_events"
 # }
 #
 # each overriding function accepts a `data` argument;
 # generated from the base implementation of the doctype dashboard,
 # along with any modifications made in other Frappe apps
 # override_doctype_dashboards = {
-#	"Task": "gymmgt.task.get_dashboard_data"
+# "Task": "gymmgt.task.get_dashboard_data"
 # }
 
 # exempt linked doctypes from being automatically cancelled
@@ -173,29 +181,29 @@ app_license = "MIT"
 # --------------------
 
 # user_data_fields = [
-#	{
-#		"doctype": "{doctype_1}",
-#		"filter_by": "{filter_by}",
-#		"redact_fields": ["{field_1}", "{field_2}"],
-#		"partial": 1,
-#	},
-#	{
-#		"doctype": "{doctype_2}",
-#		"filter_by": "{filter_by}",
-#		"partial": 1,
-#	},
-#	{
-#		"doctype": "{doctype_3}",
-#		"strict": False,
-#	},
-#	{
-#		"doctype": "{doctype_4}"
-#	}
+# {
+# "doctype": "{doctype_1}",
+# "filter_by": "{filter_by}",
+# "redact_fields": ["{field_1}", "{field_2}"],
+# "partial": 1,
+# },
+# {
+# "doctype": "{doctype_2}",
+# "filter_by": "{filter_by}",
+# "partial": 1,
+# },
+# {
+# "doctype": "{doctype_3}",
+# "strict": False,
+# },
+# {
+# "doctype": "{doctype_4}"
+# }
 # ]
 
 # Authentication and authorization
 # --------------------------------
 
 # auth_hooks = [
-#	"gymmgt.auth.validate"
+# "gymmgt.auth.validate"
 # ]
