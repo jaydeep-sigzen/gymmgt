@@ -11,14 +11,17 @@
   "status",
   "gender",
   "mobile_number",
+  "column_break_f3ch3",
   "joining_date",
   "date_of_birth",
+  "age",
   "route"
  ],
  "fields": [
   {
    "fieldname": "route",
    "fieldtype": "Data",
+   "hidden": 1,
    "label": "Route",
    "read_only": 1
   },
@@ -58,12 +61,23 @@
    "in_list_view": 1,
    "label": "Joining Date",
    "reqd": 1
+  },
+  {
+   "depends_on": "age",
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "label": "Age",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_f3ch3",
+   "fieldtype": "Column Break"
   }
  ],
  "has_web_view": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-04-22 19:27:33.476998",
+ "modified": "2023-04-24 00:46:46.664889",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Trainer",

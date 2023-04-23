@@ -3,6 +3,9 @@
 
 # import frappe
 from frappe.model.document import Document
+from gymmgt.api.gymmgt import calculate_age
+
 
 class GymMember(Document):
-	pass
+    def before_insert(self):
+        self.age = f'{calculate_age(self.date_of_birth)} Year Old'

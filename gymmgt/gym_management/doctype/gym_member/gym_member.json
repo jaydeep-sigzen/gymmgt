@@ -19,12 +19,12 @@
   "status",
   "section_break_cxfhb",
   "date_of_birth",
+  "age",
   "personal_info_tab",
   "section_break_gmptf",
   "section_break_yxytp",
   "email_id",
-  "address",
-  "amended_from"
+  "address"
  ],
  "fields": [
   {
@@ -117,19 +117,16 @@
    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "amended_from",
-   "fieldtype": "Link",
-   "label": "Amended From",
-   "no_copy": 1,
-   "options": "Gym Member",
-   "print_hide": 1,
+   "depends_on": "age",
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "label": "Age",
    "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
- "is_submittable": 1,
  "links": [],
- "modified": "2023-04-22 18:26:57.943747",
+ "modified": "2023-04-24 01:50:44.102313",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gym Member",

@@ -21,5 +21,4 @@ frappe.ui.form.on('Gym Member', {
 		}
 	}
 
-
 });
