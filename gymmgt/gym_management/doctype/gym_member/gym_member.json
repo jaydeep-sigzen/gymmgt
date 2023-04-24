@@ -43,6 +43,7 @@
    "reqd": 1
   },
   {
+   "default": "+91-",
    "fieldname": "mobile_number",
    "fieldtype": "Phone",
    "in_list_view": 1,
@@ -126,7 +127,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-04-24 01:50:44.102313",
+ "modified": "2023-04-24 10:46:06.702782",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gym Member",
@@ -146,7 +147,6 @@
    "write": 1
   }
  ],
- "quick_entry": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
