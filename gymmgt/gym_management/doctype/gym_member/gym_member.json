@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{{MM}}-{{YYYY}}-{{####}}",
+ "autoname": "format:{member_name}-{####}",
  "creation": "2023-04-21 17:40:43.986955",
  "default_view": "List",
  "doctype": "DocType",
@@ -60,9 +60,9 @@
   },
   {
    "fieldname": "gender",
-   "fieldtype": "Select",
+   "fieldtype": "Link",
    "label": "Gender",
-   "options": "\nMale\nFemale",
+   "options": "Gender",
    "reqd": 1
   },
   {
@@ -126,8 +126,14 @@
   }
  ],
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2023-04-24 10:46:06.702782",
+ "links": [
+  {
+   "group": "TEST",
+   "link_doctype": "Assign Diet Plan",
+   "link_fieldname": "assign_to_member"
+  }
+ ],
+ "modified": "2023-04-24 11:53:06.043002",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gym Member",

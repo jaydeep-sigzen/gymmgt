@@ -11,7 +11,8 @@
   "section_break_kffhw",
   "registration_fee",
   "column_break_zggqj",
-  "default_days"
+  "default_days",
+  "no_of_locker"
  ],
  "fields": [
   {
@@ -37,12 +38,18 @@
   {
    "fieldname": "section_break_kffhw",
    "fieldtype": "Section Break"
+  },
+  {
+   "default": "5",
+   "fieldname": "no_of_locker",
+   "fieldtype": "Int",
+   "label": "No Of Locker"
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2023-04-21 11:12:32.349545",
+ "modified": "2023-04-24 12:15:28.744384",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gym Settings",
