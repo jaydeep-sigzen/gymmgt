@@ -113,9 +113,7 @@ home_page = "home"
 # }
 fixtures = [
     {'dt': "Web Page"},
-    {'dt': "Website Settings"},
-    {'dt': "Website Theme"},
-    {'dt': "Color"}
+    {'dt': "Website Settings"}
 ]
 
 # Scheduled Tasks

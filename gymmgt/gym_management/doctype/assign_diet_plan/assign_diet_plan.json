@@ -8,11 +8,11 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "diet_goal",
+  "assign_to_member",
   "column_break_nhomm",
   "company",
   "section_break_qzftn",
-  "assign_to_member",
+  "diet_goal",
   "status",
   "start_date",
   "end_date",
@@ -44,7 +44,7 @@
    "fieldname": "assign_to_member",
    "fieldtype": "Link",
    "label": "Assign to Member",
-   "options": "Gym Member"
+   "options": "Gym Members"
   },
   {
    "fieldname": "status",
@@ -71,7 +71,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-04-24 11:55:00.580477",
+ "modified": "2023-04-25 02:16:47.203532",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Assign Diet Plan",

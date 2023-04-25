@@ -131,12 +131,16 @@
    "group": "TEST",
    "link_doctype": "Assign Diet Plan",
    "link_fieldname": "assign_to_member"
+  },
+  {
+   "link_doctype": "Assign Member Metrics",
+   "link_fieldname": "assign_to_member"
   }
  ],
- "modified": "2023-04-24 11:53:06.043002",
+ "modified": "2023-04-25 02:18:00.270505",
  "modified_by": "Administrator",
  "module": "Gym Management",
- "name": "Gym Member",
+ "name": "Gym Members",
  "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
