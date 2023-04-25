@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{member_name}-{####}",
+ "autoname": "format:{member_name}-{YY}-{MM}-{DD}-{#}",
  "creation": "2023-04-21 17:40:43.986955",
  "default_view": "List",
  "doctype": "DocType",
@@ -43,7 +43,7 @@
    "reqd": 1
   },
   {
-   "default": "+91-",
+   "default": "+91-9904026960",
    "fieldname": "mobile_number",
    "fieldtype": "Phone",
    "in_list_view": 1,
@@ -128,16 +128,21 @@
  "index_web_pages_for_search": 1,
  "links": [
   {
-   "group": "TEST",
+   "group": "Link Documents",
    "link_doctype": "Assign Diet Plan",
    "link_fieldname": "assign_to_member"
   },
   {
+   "group": "Link Documents",
    "link_doctype": "Assign Member Metrics",
    "link_fieldname": "assign_to_member"
+  },
+  {
+   "link_doctype": "Gym Membership",
+   "link_fieldname": "member"
   }
  ],
- "modified": "2023-04-25 02:18:00.270505",
+ "modified": "2023-04-26 00:48:46.845086",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gym Members",

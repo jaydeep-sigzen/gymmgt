@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_guest_to_view": 1,
  "allow_rename": 1,
  "autoname": "format:{plan_name}-{##}",
  "creation": "2023-04-20 01:04:11.186276",
@@ -9,7 +10,9 @@
  "engine": "InnoDB",
  "field_order": [
   "plan_name",
+  "item",
   "column_break_toepm",
+  "currrency",
   "image",
   "section_break_ndecw",
   "description",
@@ -48,12 +51,25 @@
   {
    "fieldname": "section_break_ndecw",
    "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "label": "Item",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "currrency",
+   "fieldtype": "Link",
+   "label": "Currrency",
+   "options": "Currency"
   }
  ],
  "has_web_view": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-04-21 12:43:18.249091",
+ "modified": "2023-04-25 12:41:51.985057",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Workout Plan",

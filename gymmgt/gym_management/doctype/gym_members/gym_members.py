@@ -1,11 +1,13 @@
 # Copyright (c) 2023, Jaydeep-Sigzen and contributors
 # For license information, please see license.txt
 
-# import frappe
+import frappe
 from frappe.model.document import Document
 from gymmgt.api.gymmgt import calculate_age
 
 
 class GymMembers(Document):
     def before_insert(self):
-        self.age = f'{calculate_age(self.date_of_birth)} Year Old'
+        if not frappe.db.get_single_value('Gym Settings', 'link_to_customer'):
+            frappe.throw(
+                'Please enable Link to Customer Check box from Gym Settings.')

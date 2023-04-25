@@ -7,7 +7,7 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "add_customer_to_gym_member",
+  "link_to_customer",
   "section_break_kffhw",
   "registration_fee",
   "column_break_zggqj",
@@ -26,12 +26,6 @@
    "label": "Default Days"
   },
   {
-   "default": "0",
-   "fieldname": "add_customer_to_gym_member",
-   "fieldtype": "Check",
-   "label": "Add Customer to Gym Member"
-  },
-  {
    "fieldname": "column_break_zggqj",
    "fieldtype": "Column Break"
   },
@@ -44,12 +38,19 @@
    "fieldname": "no_of_locker",
    "fieldtype": "Int",
    "label": "No Of Locker"
+  },
+  {
+   "default": "1",
+   "fieldname": "link_to_customer",
+   "fieldtype": "Check",
+   "label": "Link To Customer",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2023-04-24 12:15:28.744384",
+ "modified": "2023-04-25 19:07:57.568546",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gym Settings",

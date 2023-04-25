@@ -113,7 +113,11 @@ home_page = "home"
 # }
 fixtures = [
     {'dt': "Web Page"},
-    {'dt': "Website Settings"}
+    {'dt': "Website Settings"},
+    {"dt": "Role", "filters": [
+        ["name", "in", ["Gym Member", "Gym Trainer", "Gym Admin"]]]},
+    {"dt": "Role Profile", "filters": [
+        ["name", "in", ["Gym Member Profile", "Gym Trainer Profile"]]]}
 ]
 
 # Scheduled Tasks
