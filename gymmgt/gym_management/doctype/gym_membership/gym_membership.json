@@ -13,12 +13,14 @@
   "company",
   "section_break_uifiu",
   "date",
+  "column_break_9gwsj",
+  "trainer",
   "gym_membership_details_section",
   "workout_plan",
-  "trainer",
-  "column_break_dyn27",
-  "activation_date",
   "valid_days",
+  "column_break_dyn27",
+  "time_slot",
+  "activation_date",
   "total_amount_section",
   "amount",
   "amended_from"
@@ -28,7 +30,8 @@
    "fieldname": "member",
    "fieldtype": "Link",
    "label": "Member",
-   "options": "Customer"
+   "options": "Customer",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_kpk6e",
@@ -59,12 +62,15 @@
    "fieldname": "workout_plan",
    "fieldtype": "Link",
    "label": "Workout Plan",
-   "options": "Workout Plan"
+   "options": "Workout Plan",
+   "reqd": 1
   },
   {
    "fieldname": "activation_date",
    "fieldtype": "Date",
-   "label": "Activation Date"
+   "in_list_view": 1,
+   "label": "Activation Date",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_dyn27",
@@ -73,7 +79,9 @@
   {
    "fieldname": "valid_days",
    "fieldtype": "Int",
-   "label": "Valid days"
+   "in_list_view": 1,
+   "label": "Valid days",
+   "reqd": 1
   },
   {
    "fieldname": "trainer",
@@ -98,7 +106,20 @@
   {
    "fieldname": "amount",
    "fieldtype": "Currency",
-   "label": "Amount"
+   "in_list_view": 1,
+   "label": "Amount",
+   "reqd": 1
+  },
+  {
+   "fieldname": "time_slot",
+   "fieldtype": "Link",
+   "label": "Time Slot ",
+   "options": "Time Slot",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_9gwsj",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -109,7 +130,7 @@
    "link_fieldname": "customer"
   }
  ],
- "modified": "2023-04-26 02:55:01.688244",
+ "modified": "2023-04-26 13:14:53.674075",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gym Membership",

@@ -17,11 +17,7 @@ def create_customer(name):
     member = frappe.db.sql(
         f"Select member_name from `tabGym Members` where name='{name}'", as_dict=1)[0]
 
-    # print(f'===> Member {member}')
-    # frappe.throw('API Error')
-
     customer = frappe.get_doc({
-
         "doctype": "Customer",
         "customer_name": member['member_name'],
         "customer_type": 'Company',
@@ -30,3 +26,14 @@ def create_customer(name):
     })
     customer.insert()
     return "Success"
+
+
+@frappe.whitelist()
+def get_default_plan():
+    days = frappe.db.get_single_value('Gym Settings', 'default_days')
+    amount = frappe.db.get_single_value('Gym Settings', 'registration_fee')
+    obj = {
+        'default_days': days,
+        'default_amount': amount
+    }
+    return obj
