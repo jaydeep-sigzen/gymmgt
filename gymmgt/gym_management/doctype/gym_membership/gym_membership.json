@@ -79,7 +79,7 @@
    "fieldname": "trainer",
    "fieldtype": "Link",
    "label": "Trainer",
-   "options": "Trainer"
+   "options": "Gym Trainer"
   },
   {
    "fieldname": "amended_from",
@@ -109,7 +109,7 @@
    "link_fieldname": "customer"
   }
  ],
- "modified": "2023-04-26 00:47:01.825792",
+ "modified": "2023-04-26 02:55:01.688244",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gym Membership",
@@ -127,6 +127,27 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Gym Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Gym Member",
+   "share": 1
   }
  ],
  "sort_field": "modified",

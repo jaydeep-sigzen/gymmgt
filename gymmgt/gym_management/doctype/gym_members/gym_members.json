@@ -142,7 +142,7 @@
    "link_fieldname": "member"
   }
  ],
- "modified": "2023-04-26 00:48:46.845086",
+ "modified": "2023-04-26 02:52:27.408101",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gym Members",
@@ -160,6 +160,37 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Gym Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Gym Member",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Gym Trainer",
+   "share": 1
   }
  ],
  "sort_field": "modified",
