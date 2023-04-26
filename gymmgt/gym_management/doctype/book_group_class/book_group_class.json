@@ -48,7 +48,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-04-26 19:30:06.243499",
+ "modified": "2023-04-27 00:09:05.957103",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Book Group Class",
@@ -76,6 +76,18 @@
    "read": 1,
    "report": 1,
    "role": "Gym Member",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Gym Admin",
    "share": 1,
    "write": 1
   }

@@ -10,23 +10,13 @@ def calculate_age(birthdate_str):
         ((today.month, today.day) < (birthdate.month, birthdate.day))
     return age
 
-
 @frappe.whitelist()
-def create_customer(name):
-
-    member = frappe.db.sql(
-        f"Select member_name from `tabGym Members` where name='{name}'", as_dict=1)[0]
-
-    customer = frappe.get_doc({
-        "doctype": "Customer",
-        "customer_name": member['member_name'],
-        "customer_type": 'Company',
-        "territory": 'India',
-        "customer_group": 'Individual'
-    })
-    customer.insert()
-    return "Success"
-
+def check_user(user_name, email_id):
+    if not frappe.db.exists('User', {
+            'full_name': user_name,
+            'name': email_id
+    }):
+        return True
 
 @frappe.whitelist()
 def get_default_plan():
@@ -37,3 +27,23 @@ def get_default_plan():
         'default_amount': amount
     }
     return obj
+
+@frappe.whitelist()
+def create_user(customer):
+    if frappe.db.exists('Customer', {'name': customer}):
+        customer_doc = frappe.get_doc('Customer', {'name': customer})
+        user = frappe.get_doc({
+            'doctype': 'User',
+            'email': customer_doc.email_id,
+            'first_name': customer_doc.customer_name,
+            'enabled': 1,
+            'role_profile_name': "Gym Member",
+            'user_type': "Website User",
+        })
+        user.insert(ignore_permissions=True)
+        frappe.msgprint('User Created')
+        return True
+    else:
+        frappe.msgprint('Customer not exist Error')
+        return False
+        

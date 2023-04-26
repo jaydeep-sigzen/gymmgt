@@ -5,9 +5,13 @@
 frappe.ui.form.on('Gym Members', {
 
 	refresh: function (frm) {
-		if (!frm.is_new()) {
-			frm.disable_save()
+		// if (!frm.is_new()) {
+		// 	// frm.disable_save()
+		// }
+		if (frm.doc.member_name) {
+			check_user(frm)
 		}
+
 	},
 	date_of_birth: function (frm) {
 
@@ -16,27 +20,42 @@ frappe.ui.form.on('Gym Members', {
 			age: calculateAge(frm.doc.date_of_birth),
 		})
 		frm.refresh_field('age');
-
-		frappe.validated = false;
-	},
-	after_save: function (frm) {
-		// frappe.msgprint('Before Save')
-		frappe.call({
-			method: 'gymmgt.api.gymmgt.create_customer',
-			args: {
-				'name': frm.doc.name
-			},
-			callback: function (r) {
-				frappe.validated = true;
-				frappe.msgprint('Customer Created');
-			}
-		});
-
-		frappe.validated = false;
 	}
-
-
 });
+
+
+function check_user(frm) {
+	frappe.call({
+		method: "gymmgt.api.gymmgt.check_user",
+		args: {
+			'user_name': frm.doc.member_name,
+			'email_id': frm.doc.email_id
+		},
+		callback: function (r) {
+			if (r.message) {
+				frm.add_custom_button('User', () => {
+					create_user(frm)
+				}, (' Create '))
+			}
+		}
+	})
+}
+
+// Create User 
+function create_user(frm) {
+	frappe.call({
+		method: "gymmgt.api.gymmgt.create_user",
+		args: {
+			'customer': frm.doc.member_name
+		},
+		callback: function (r) {
+			frappe.validated = true;
+			if (r.message) {
+				frm.reload_doc()
+			}
+		}
+	})
+}
 
 
 // This function calculates the age of a person based on their birth date
