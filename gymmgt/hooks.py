@@ -111,14 +111,18 @@ home_page = "home"
 # "on_trash": "method"
 # }
 # }
-fixtures = [
-    {'dt': "Web Page"},
-    {'dt': "Website Settings"},
-    {"dt": "Role", "filters": [
-        ["name", "in", ["Gym Member", "Gym Trainer", "Gym Admin"]]]},
-    {"dt": "Role Profile", "filters": [
-        ["name", "in", ["Gym Member Profile", "Gym Trainer Profile"]]]}
-]
+fixtures = [{
+    "dt":
+    "Role",
+    "filters": [["name", "in", ["Gym Member", "Gym Trainer", "Gym Admin"]]]
+}, {
+    "dt": "Role Profile",
+    "filters": [["name", "in", ["Gym Member", "Gym Trainer"]]]
+}, {
+    'dt': "Web Page"
+}, {
+    'dt': "Website Settings"
+}]
 
 # Scheduled Tasks
 # ---------------
