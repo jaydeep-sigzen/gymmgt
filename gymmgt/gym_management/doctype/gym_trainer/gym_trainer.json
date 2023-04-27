@@ -1,17 +1,19 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "prompt",
+ "autoname": "format:{trainer_name}",
  "creation": "2023-04-22 19:00:25.393295",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "status",
+  "trainer_name",
   "gender",
   "mobile_number",
+  "email_id",
   "column_break_f3ch3",
+  "status",
   "joining_date",
   "date_of_birth",
   "age",
@@ -73,17 +75,28 @@
   {
    "fieldname": "column_break_f3ch3",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "email_id",
+   "fieldtype": "Data",
+   "label": "Email",
+   "reqd": 1
+  },
+  {
+   "fieldname": "trainer_name",
+   "fieldtype": "Data",
+   "label": "Trainer Full Name"
   }
  ],
  "has_web_view": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-04-26 17:52:29.527414",
+ "modified": "2023-04-27 16:27:11.460307",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gym Trainer",
  "name_case": "Title Case",
- "naming_rule": "Set by user",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {

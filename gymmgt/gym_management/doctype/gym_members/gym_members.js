@@ -5,13 +5,9 @@
 frappe.ui.form.on('Gym Members', {
 
 	refresh: function (frm) {
-		// if (!frm.is_new()) {
-		// 	// frm.disable_save()
-		// }
 		if (frm.doc.member_name) {
 			check_user(frm)
 		}
-
 	},
 	date_of_birth: function (frm) {
 

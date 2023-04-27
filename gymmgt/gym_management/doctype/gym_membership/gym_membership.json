@@ -17,12 +17,14 @@
   "trainer",
   "gym_membership_details_section",
   "workout_plan",
-  "valid_days",
+  "activation_date",
   "column_break_dyn27",
   "time_slot",
-  "activation_date",
+  "plan_duration",
   "total_amount_section",
   "amount",
+  "column_break_cod4f",
+  "valid_days",
   "amended_from"
  ],
  "fields": [
@@ -101,7 +103,7 @@
   {
    "fieldname": "total_amount_section",
    "fieldtype": "Section Break",
-   "label": "Total Amount"
+   "label": "Total "
   },
   {
    "fieldname": "amount",
@@ -120,6 +122,16 @@
   {
    "fieldname": "column_break_9gwsj",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_cod4f",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Monthly",
+   "fieldname": "plan_duration",
+   "fieldtype": "Data",
+   "label": "Plan Duration"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -130,7 +142,7 @@
    "link_fieldname": "customer"
   }
  ],
- "modified": "2023-04-26 13:14:53.674075",
+ "modified": "2023-04-28 00:38:37.442585",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gym Membership",

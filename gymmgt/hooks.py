@@ -122,6 +122,8 @@ fixtures = [{
     'dt': "Web Page"
 }, {
     'dt': "Website Settings"
+}, {
+    'dt': "Custom DocPerm"
 }]
 
 # Scheduled Tasks

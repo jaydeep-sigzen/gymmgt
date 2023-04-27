@@ -7,6 +7,7 @@ from gymmgt.api.gymmgt import calculate_age
 
 
 class GymMembers(Document):
+
     def before_insert(self):
         if not frappe.db.get_single_value('Gym Settings', 'link_to_customer'):
             frappe.throw(
@@ -16,7 +17,8 @@ class GymMembers(Document):
         self.create_customer()
 
     def create_customer(self):
-        if not frappe.db.exists('Customer', {'customer_name': self.member_name}):
+        if not frappe.db.exists('Customer',
+                                {'customer_name': self.member_name}):
             customer = frappe.new_doc('Customer')
             customer.customer_name = self.member_name
             customer.email_id = self.email_id
