@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"XSdE2FVDtL\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Gym Management</span>\",\"col\":12}},{\"id\":\"MbPWW4Iy3x\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gym Trainer\",\"col\":3}},{\"id\":\"LnlyHw8bak\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gym Members\",\"col\":3}},{\"id\":\"fDWiYGGKJy\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gym Membership\",\"col\":3}},{\"id\":\"_EuCiO1G9s\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Book Group Class\",\"col\":3}},{\"id\":\"hlbJXlHnUb\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Assign Diet Plan\",\"col\":3}},{\"id\":\"xfLbofqD_m\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Assign Member Metrics\",\"col\":3}},{\"id\":\"uuvPrUe2jU\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Gym Setting</b></span>\",\"col\":12}}]",
+ "content": "[{\"id\":\"XSdE2FVDtL\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Gym Management</span>\",\"col\":12}},{\"id\":\"MbPWW4Iy3x\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gym Trainer\",\"col\":3}},{\"id\":\"LnlyHw8bak\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gym Members\",\"col\":3}},{\"id\":\"fDWiYGGKJy\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gym Membership\",\"col\":3}},{\"id\":\"_EuCiO1G9s\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Book Group Class\",\"col\":3}},{\"id\":\"hlbJXlHnUb\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Assign Diet Plan\",\"col\":3}},{\"id\":\"xfLbofqD_m\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Assign Member Metrics\",\"col\":3}},{\"id\":\"UC4fC_2xiY\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Workout Plan\",\"col\":3}},{\"id\":\"uuvPrUe2jU\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Gym Setting</b></span>\",\"col\":12}}]",
  "creation": "2023-04-26 11:15:42.342291",
  "docstatus": 0,
  "doctype": "Workspace",
@@ -11,7 +11,7 @@
  "is_hidden": 0,
  "label": "Gym Management",
  "links": [],
- "modified": "2023-04-27 00:11:58.143099",
+ "modified": "2023-04-28 11:43:25.563594",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gym Management",
@@ -33,6 +33,13 @@
  ],
  "sequence_id": 2.0,
  "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Workout Plan",
+   "link_to": "Workout Plan",
+   "type": "DocType"
+  },
   {
    "color": "Grey",
    "doc_view": "List",

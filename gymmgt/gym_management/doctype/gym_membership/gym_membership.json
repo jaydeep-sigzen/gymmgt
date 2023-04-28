@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:Member-{DD}-{MM}-{YY}-{##}",
+ "autoname": "format:GM-{MM}{YY}{####}",
  "creation": "2023-04-26 00:37:39.780450",
  "default_view": "List",
  "doctype": "DocType",
@@ -32,7 +32,7 @@
    "fieldname": "member",
    "fieldtype": "Link",
    "label": "Member",
-   "options": "Customer",
+   "options": "Gym Members",
    "reqd": 1
   },
   {
@@ -142,7 +142,7 @@
    "link_fieldname": "customer"
   }
  ],
- "modified": "2023-04-28 00:38:37.442585",
+ "modified": "2023-04-28 11:34:39.006201",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gym Membership",
