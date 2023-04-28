@@ -32,7 +32,8 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Member Full Name",
-   "reqd": 1
+   "reqd": 1,
+   "unique": 1
   },
   {
    "fieldname": "company",
@@ -124,6 +125,11 @@
  "index_web_pages_for_search": 1,
  "links": [
   {
+   "group": "My Workout",
+   "link_doctype": "Assign Workout Plan",
+   "link_fieldname": "assign_to_member"
+  },
+  {
    "group": "Link Documents",
    "link_doctype": "Assign Diet Plan",
    "link_fieldname": "assign_to_member"
@@ -132,9 +138,14 @@
    "group": "Link Documents",
    "link_doctype": "Assign Member Metrics",
    "link_fieldname": "assign_to_member"
+  },
+  {
+   "group": "Group Class",
+   "link_doctype": "Book Group Class",
+   "link_fieldname": "assign_to_member"
   }
  ],
- "modified": "2023-04-27 02:13:59.961168",
+ "modified": "2023-04-29 03:53:23.917575",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gym Members",

@@ -87,6 +87,14 @@ home_page = "home"
 # permission_query_conditions = {
 # "Event": "frappe.desk.doctype.event.event.get_permission_query_conditions",
 # }
+
+permission_query_conditions = {
+    "Gym Members":
+    "gymmgt.permission.query.get_permission_query_conditions_for_gym_member",
+    "Gym Trainer":
+    "gymmgt.permission.query.get_permission_query_conditions_for_trainer"
+}
+
 #
 # has_permission = {
 # "Event": "frappe.desk.doctype.event.event.has_permission",
@@ -118,6 +126,8 @@ fixtures = [{
 }, {
     "dt": "Role Profile",
     "filters": [["name", "in", ["Gym Member", "Gym Trainer"]]]
+}, {
+    'dt': "Module Profile"
 }, {
     'dt': "Web Page"
 }, {

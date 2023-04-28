@@ -1,80 +1,84 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{DD}-{MM}-{YY}-{assign_to_member}",
- "creation": "2023-04-21 12:04:11.184123",
+ "autoname": "format:WP{#####}",
+ "creation": "2023-04-29 03:27:25.908286",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
   "assign_to_member",
-  "column_break_nhomm",
-  "company",
-  "section_break_qzftn",
-  "diet_goal",
   "status",
+  "column_break_9czyl",
+  "workout_plan",
+  "section_break_tdqj0",
   "start_date",
-  "end_date",
-  "diet_plan_details"
+  "column_break_nvrnh",
+  "end_dtae",
+  "exercise_section",
+  "exercise"
  ],
  "fields": [
   {
-   "fieldname": "diet_goal",
+   "fieldname": "workout_plan",
    "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Diet Goal",
-   "options": "Diet Goal"
+   "label": "Workout Plan",
+   "options": "Workout Plan"
   },
   {
-   "fieldname": "column_break_nhomm",
+   "default": "Today",
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "end_dtae",
+   "fieldtype": "Data",
+   "label": "End Dtae"
+  },
+  {
+   "fieldname": "exercise",
+   "fieldtype": "Table",
+   "label": "Exercise Detail",
+   "options": "Exercise"
+  },
+  {
+   "fieldname": "exercise_section",
+   "fieldtype": "Section Break",
+   "label": "Exercise"
+  },
+  {
+   "fieldname": "column_break_9czyl",
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "company",
-   "fieldtype": "Link",
-   "label": "Company",
-   "options": "Company"
+   "fieldname": "section_break_tdqj0",
+   "fieldtype": "Section Break"
   },
   {
-   "fieldname": "section_break_qzftn",
-   "fieldtype": "Section Break"
+   "fieldname": "column_break_nvrnh",
+   "fieldtype": "Column Break"
   },
   {
    "fieldname": "assign_to_member",
    "fieldtype": "Link",
-   "label": "Assign to Member",
+   "label": "Member",
    "options": "Gym Members"
   },
   {
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "Active\nExpire"
-  },
-  {
-   "fieldname": "start_date",
-   "fieldtype": "Date",
-   "label": "Start Date"
-  },
-  {
-   "fieldname": "end_date",
-   "fieldtype": "Date",
-   "label": "End Date"
-  },
-  {
-   "fieldname": "diet_plan_details",
-   "fieldtype": "Table",
-   "label": "Diet Plan Details",
-   "options": "Diet Plan Details"
+   "options": "Active\nExpired"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-04-29 02:38:31.856829",
+ "modified": "2023-04-29 04:01:50.659642",
  "modified_by": "Administrator",
  "module": "Gym Management",
- "name": "Assign Diet Plan",
+ "name": "Assign Workout Plan",
  "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
@@ -98,7 +102,7 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Gym Admin",
+   "role": "Gym Trainer",
    "share": 1,
    "write": 1
   },
@@ -110,7 +114,7 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Gym Trainer",
+   "role": "Gym Member",
    "share": 1,
    "write": 1
   }

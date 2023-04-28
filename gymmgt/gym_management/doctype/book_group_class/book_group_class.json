@@ -8,20 +8,12 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "member",
+  "assign_to_member",
   "time_slot",
-  "amended_from",
-  "activate_date"
+  "activate_date",
+  "amended_from"
  ],
  "fields": [
-  {
-   "fieldname": "member",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Member",
-   "options": "Gym Members",
-   "reqd": 1
-  },
   {
    "fieldname": "time_slot",
    "fieldtype": "Link",
@@ -43,12 +35,20 @@
    "fieldname": "activate_date",
    "fieldtype": "Date",
    "label": "Activate Date"
+  },
+  {
+   "fieldname": "assign_to_member",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Member",
+   "options": "Gym Members",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-04-28 11:34:30.563362",
+ "modified": "2023-04-29 03:43:46.401279",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Book Group Class",
@@ -77,6 +77,7 @@
    "report": 1,
    "role": "Gym Member",
    "share": 1,
+   "submit": 1,
    "write": 1
   },
   {
@@ -89,6 +90,7 @@
    "report": 1,
    "role": "Gym Admin",
    "share": 1,
+   "submit": 1,
    "write": 1
   }
  ],
