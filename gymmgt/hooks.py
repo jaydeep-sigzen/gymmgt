@@ -92,7 +92,9 @@ permission_query_conditions = {
     "Gym Members":
     "gymmgt.permission.query.get_permission_query_conditions_for_gym_member",
     "Gym Trainer":
-    "gymmgt.permission.query.get_permission_query_conditions_for_trainer"
+    "gymmgt.permission.query.get_permission_query_conditions_for_trainer",
+     "Gym Membership":
+    "gymmgt.permission.query.get_permission_query_conditions_for_membership"
 }
 
 #

@@ -36,6 +36,18 @@ def get_permission_query_conditions_for_trainer(user):
 
 
 @frappe.whitelist()
+def get_permission_query_conditions_for_membership(user):
+    if not user:
+        user = frappe.session.user
+    full_name = get_user_name(user)
+    user_roles = frappe.get_roles(user)
+    if user != 'Administrator' and 'Gym Member' in user_roles:
+        conditions = f'`tabGym Membership`.`member` = "{full_name}"'
+        print(f" \n\n\n==>>conditions:{conditions}\n\n\n")
+        return conditions
+
+
+@frappe.whitelist()
 def get_user_name(user):
     if frappe.db.exists('User', {'name': user}):
         user_doc = frappe.get_doc('User', user)

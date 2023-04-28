@@ -10,6 +10,7 @@
  "field_order": [
   "assign_to_member",
   "time_slot",
+  "group_class",
   "activate_date",
   "amended_from"
  ],
@@ -43,12 +44,19 @@
    "label": "Member",
    "options": "Gym Members",
    "reqd": 1
+  },
+  {
+   "fieldname": "group_class",
+   "fieldtype": "Link",
+   "label": "Group Class",
+   "options": "Group Class Type",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-04-29 03:43:46.401279",
+ "modified": "2023-04-29 04:35:07.337339",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Book Group Class",
