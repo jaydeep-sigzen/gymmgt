@@ -1,0 +1,143 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{member}",
+ "creation": "2023-04-25 02:11:38.583533",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "assign_to_member",
+  "column_break_uidri",
+  "company",
+  "section_break_feovl",
+  "measurement_date",
+  "column_break_lqbni",
+  "next_measurement_date",
+  "nutrition_value_section",
+  "height_cent",
+  "weight_kg",
+  "column_break_tdwds",
+  "bmi",
+  "weight_status",
+  "body_measurement_section",
+  "arms_cent",
+  "calves_cent"
+ ],
+ "fields": [
+  {
+   "fieldname": "column_break_uidri",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_feovl",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "measurement_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Measurement Date ",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_lqbni",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "next_measurement_date",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Next Measurement Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "nutrition_value_section",
+   "fieldtype": "Section Break",
+   "label": "Nutrition Value"
+  },
+  {
+   "fieldname": "height_cent",
+   "fieldtype": "Data",
+   "label": "Height (Cent)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "weight_kg",
+   "fieldtype": "Data",
+   "label": "Weight (KG)"
+  },
+  {
+   "fieldname": "column_break_tdwds",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bmi",
+   "fieldtype": "Data",
+   "label": "BMI"
+  },
+  {
+   "fieldname": "weight_status",
+   "fieldtype": "Link",
+   "label": "Weight Status",
+   "options": "Weight Status"
+  },
+  {
+   "fieldname": "body_measurement_section",
+   "fieldtype": "Section Break",
+   "label": "Body Measurement"
+  },
+  {
+   "fieldname": "arms_cent",
+   "fieldtype": "Data",
+   "label": "Arms (Cent)"
+  },
+  {
+   "fieldname": "calves_cent",
+   "fieldtype": "Data",
+   "label": "Calves (Cent)"
+  },
+  {
+   "fieldname": "assign_to_member",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Assign to Member",
+   "options": "Gym Members",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-04-25 02:17:10.266322",
+ "modified_by": "Administrator",
+ "module": "Gym Management",
+ "name": "Assign Member Metrics",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

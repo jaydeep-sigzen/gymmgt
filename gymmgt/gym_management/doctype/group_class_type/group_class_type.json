@@ -1,22 +1,25 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:diet_goal",
- "creation": "2023-04-21 11:49:45.443407",
+ "autoname": "format:{type}-{##}",
+ "creation": "2023-04-24 16:12:58.470315",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "diet_goal",
-  "description"
+  "type",
+  "description",
+  "price",
+  "image",
+  "route"
  ],
  "fields": [
   {
-   "fieldname": "diet_goal",
+   "fieldname": "type",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Diet Goal",
+   "label": "Group Type",
    "reqd": 1,
    "unique": 1
   },
@@ -24,15 +27,32 @@
    "fieldname": "description",
    "fieldtype": "Small Text",
    "label": "Description "
+  },
+  {
+   "fieldname": "price",
+   "fieldtype": "Currency",
+   "label": "Price",
+   "reqd": 1
+  },
+  {
+   "fieldname": "image",
+   "fieldtype": "Attach Image",
+   "label": "Image"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route"
   }
  ],
+ "has_web_view": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-04-26 16:44:43.869210",
+ "modified": "2023-04-26 18:23:58.460420",
  "modified_by": "Administrator",
  "module": "Gym Management",
- "name": "Diet Goal",
- "naming_rule": "By fieldname",
+ "name": "Group Class Type",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
@@ -49,8 +69,8 @@
   }
  ],
  "quick_entry": 1,
+ "route": "class",
  "sort_field": "modified",
- "sort_order": "ASC",
- "states": [],
- "title_field": "diet_goal"
+ "sort_order": "DESC",
+ "states": []
 }

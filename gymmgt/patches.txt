@@ -1,0 +1,4 @@
+[pre_model_sync]
+
+[post_model_sync]
+gymmgt.gym_management.doctype.gym_trainer.patches.compute_age

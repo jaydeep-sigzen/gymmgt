@@ -8,19 +8,21 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "diet_goal",
+  "assign_to_member",
   "column_break_nhomm",
   "company",
   "section_break_qzftn",
-  "assign_to_member",
+  "diet_goal",
   "status",
   "start_date",
-  "end_date"
+  "end_date",
+  "diet_plan_details"
  ],
  "fields": [
   {
    "fieldname": "diet_goal",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Diet Goal",
    "options": "Diet Goal"
   },
@@ -42,7 +44,7 @@
    "fieldname": "assign_to_member",
    "fieldtype": "Link",
    "label": "Assign to Member",
-   "options": "Customer"
+   "options": "Gym Members"
   },
   {
    "fieldname": "status",
@@ -59,11 +61,17 @@
    "fieldname": "end_date",
    "fieldtype": "Date",
    "label": "End Date"
+  },
+  {
+   "fieldname": "diet_plan_details",
+   "fieldtype": "Table",
+   "label": "Diet Plan Details",
+   "options": "Diet Plan Details"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-04-21 12:05:35.151930",
+ "modified": "2023-04-25 02:16:47.203532",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Assign Diet Plan",

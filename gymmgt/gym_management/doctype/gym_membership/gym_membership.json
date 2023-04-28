@@ -1,0 +1,189 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:GM-{MM}{YY}{####}",
+ "creation": "2023-04-26 00:37:39.780450",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "member",
+  "column_break_kpk6e",
+  "company",
+  "section_break_uifiu",
+  "date",
+  "column_break_9gwsj",
+  "trainer",
+  "gym_membership_details_section",
+  "workout_plan",
+  "activation_date",
+  "column_break_dyn27",
+  "time_slot",
+  "plan_duration",
+  "total_amount_section",
+  "amount",
+  "column_break_cod4f",
+  "valid_days",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "member",
+   "fieldtype": "Link",
+   "label": "Member",
+   "options": "Gym Members",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_kpk6e",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "section_break_uifiu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "gym_membership_details_section",
+   "fieldtype": "Section Break",
+   "label": "Gym Membership Details"
+  },
+  {
+   "fieldname": "workout_plan",
+   "fieldtype": "Link",
+   "label": "Workout Plan",
+   "options": "Workout Plan",
+   "reqd": 1
+  },
+  {
+   "fieldname": "activation_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Activation Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_dyn27",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "valid_days",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Valid days",
+   "reqd": 1
+  },
+  {
+   "fieldname": "trainer",
+   "fieldtype": "Link",
+   "label": "Trainer",
+   "options": "Gym Trainer"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Gym Membership",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_amount_section",
+   "fieldtype": "Section Break",
+   "label": "Total "
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount",
+   "reqd": 1
+  },
+  {
+   "fieldname": "time_slot",
+   "fieldtype": "Link",
+   "label": "Time Slot ",
+   "options": "Time Slot",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_9gwsj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_cod4f",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Monthly",
+   "fieldname": "plan_duration",
+   "fieldtype": "Data",
+   "label": "Plan Duration"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Sales Invoice",
+   "link_fieldname": "customer"
+  }
+ ],
+ "modified": "2023-04-28 11:34:39.006201",
+ "modified_by": "Administrator",
+ "module": "Gym Management",
+ "name": "Gym Membership",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Gym Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Gym Member",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

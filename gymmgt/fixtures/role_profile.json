@@ -1,0 +1,32 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2023-04-27 15:28:52.685590",
+  "name": "Gym Member",
+  "role_profile": "Gym Member",
+  "roles": [
+   {
+    "parent": "Gym Member",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Gym Member"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2023-04-27 15:29:13.646569",
+  "name": "Gym Trainer",
+  "role_profile": "Gym Trainer",
+  "roles": [
+   {
+    "parent": "Gym Trainer",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Gym Trainer"
+   }
+  ]
+ }
+]

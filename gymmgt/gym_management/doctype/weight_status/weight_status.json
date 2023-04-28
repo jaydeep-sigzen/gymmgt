@@ -1,38 +1,27 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:diet_goal",
- "creation": "2023-04-21 11:49:45.443407",
+ "creation": "2023-04-25 01:57:44.829379",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "diet_goal",
-  "description"
+  "weight_status"
  ],
  "fields": [
   {
-   "fieldname": "diet_goal",
+   "fieldname": "weight_status",
    "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Diet Goal",
-   "reqd": 1,
-   "unique": 1
-  },
-  {
-   "fieldname": "description",
-   "fieldtype": "Small Text",
-   "label": "Description "
+   "label": "Weight Status"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-04-26 16:44:43.869210",
+ "modified": "2023-04-25 01:57:44.829379",
  "modified_by": "Administrator",
  "module": "Gym Management",
- "name": "Diet Goal",
- "naming_rule": "By fieldname",
+ "name": "Weight Status",
  "owner": "Administrator",
  "permissions": [
   {
@@ -50,7 +39,6 @@
  ],
  "quick_entry": 1,
  "sort_field": "modified",
- "sort_order": "ASC",
- "states": [],
- "title_field": "diet_goal"
+ "sort_order": "DESC",
+ "states": []
 }

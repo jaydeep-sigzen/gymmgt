@@ -111,12 +111,20 @@ home_page = "home"
 # "on_trash": "method"
 # }
 # }
-fixtures = [
-    {'dt': "Web Page"},
-    {'dt': "Website Settings"},
-    {'dt': "Website Theme"},
-    {'dt': "Color"}
-]
+fixtures = [{
+    "dt":
+    "Role",
+    "filters": [["name", "in", ["Gym Member", "Gym Trainer", "Gym Admin"]]]
+}, {
+    "dt": "Role Profile",
+    "filters": [["name", "in", ["Gym Member", "Gym Trainer"]]]
+}, {
+    'dt': "Web Page"
+}, {
+    'dt': "Website Settings"
+}, {
+    'dt': "Custom DocPerm"
+}]
 
 # Scheduled Tasks
 # ---------------
