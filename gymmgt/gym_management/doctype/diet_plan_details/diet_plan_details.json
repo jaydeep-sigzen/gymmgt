@@ -26,38 +26,50 @@
   {
    "fieldname": "fat_gms",
    "fieldtype": "Data",
-   "label": "Fat (gms)"
+   "in_list_view": 1,
+   "label": "Fat (gms)",
+   "reqd": 1
   },
   {
    "fieldname": "carbohydrate_gms",
    "fieldtype": "Data",
-   "label": "Carbohydrate (gms) "
+   "in_list_view": 1,
+   "label": "Carbohydrate (gms) ",
+   "reqd": 1
   },
   {
    "fieldname": "protein_gms",
    "fieldtype": "Data",
-   "label": "Protein (gms)"
+   "in_list_view": 1,
+   "label": "Protein (gms)",
+   "reqd": 1
   },
   {
    "fieldname": "calories_gms",
    "fieldtype": "Data",
-   "label": "Calories (gms)"
+   "in_list_view": 1,
+   "label": "Calories (gms)",
+   "reqd": 1
   },
   {
    "fieldname": "qty_gms",
    "fieldtype": "Data",
-   "label": "Qty (gms)"
+   "in_list_view": 1,
+   "label": "Qty (gms)",
+   "reqd": 1
   },
   {
    "fieldname": "meal_intervals",
    "fieldtype": "Data",
-   "label": "Meal Intervals"
+   "in_list_view": 1,
+   "label": "Meal Intervals",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-04-24 12:21:17.060569",
+ "modified": "2023-04-28 12:06:26.802254",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Diet Plan Details",

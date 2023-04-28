@@ -25,7 +25,8 @@
   "amount",
   "column_break_cod4f",
   "valid_days",
-  "amended_from"
+  "amended_from",
+  "end_date"
  ],
  "fields": [
   {
@@ -53,7 +54,8 @@
    "default": "Today",
    "fieldname": "date",
    "fieldtype": "Date",
-   "label": "Date"
+   "label": "Date",
+   "read_only": 1
   },
   {
    "fieldname": "gym_membership_details_section",
@@ -68,6 +70,7 @@
    "reqd": 1
   },
   {
+   "default": "Today",
    "fieldname": "activation_date",
    "fieldtype": "Date",
    "in_list_view": 1,
@@ -130,8 +133,15 @@
   {
    "default": "Monthly",
    "fieldname": "plan_duration",
-   "fieldtype": "Data",
-   "label": "Plan Duration"
+   "fieldtype": "Select",
+   "label": "Plan Duration",
+   "options": "Monthly\nQuarterly\nYearly"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "hidden": 1,
+   "label": "End Date"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -139,10 +149,10 @@
  "links": [
   {
    "link_doctype": "Sales Invoice",
-   "link_fieldname": "customer"
+   "link_fieldname": "gym_member_id"
   }
  ],
- "modified": "2023-04-28 11:34:39.006201",
+ "modified": "2023-04-29 01:45:03.861110",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gym Membership",
@@ -171,6 +181,7 @@
    "report": 1,
    "role": "Gym Admin",
    "share": 1,
+   "submit": 1,
    "write": 1
   },
   {
@@ -185,5 +196,6 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "track_changes": 1
 }
