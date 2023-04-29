@@ -19,12 +19,14 @@ def get_data(filters):
 
     my_query = f"""
 		SELECT
+			measurement_date,
 			height_cent,
 			weight_kg,
 			bmi,
 			weight_status,
 			arms_cent,
 			calves_cent
+
 		FROM 
   			`tabAssign Member Metrics`
 		WHERE
@@ -37,7 +39,7 @@ def get_data(filters):
 
 def get_columns():
     return [
-        "Height (Cent):Data:200", "Weight (KG):Data:200", "BMI:Data:200",
-        "Weight Status:Link/Weight Status:200", "Arms (Cent):Data:200",
-        "Calves (Cent):Data:200"
+        "Date:Date:200", "Height (Cent):Data:200", "Weight (KG):Data:200",
+        "BMI:Data:200", "Weight Status:Link/Weight Status:200",
+        "Arms (Cent):Data:200", "Calves (Cent):Data:200"
     ]
