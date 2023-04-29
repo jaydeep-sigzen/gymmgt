@@ -80,6 +80,7 @@ def create_user(customer):
             'enabled': 1,
             'role_profile_name': "Gym Member",
             'user_type': "Website User",
+            'module_profile': "Gym Member Module Profile"
         })
         user.insert(ignore_permissions=True)
         frappe.msgprint('User Created')
@@ -91,15 +92,8 @@ def create_user(customer):
 
 @frappe.whitelist()
 def create_sales_invoice(member, member_id, plan_name, amount):
-    print(f'\n\n\n { member }\n\n\n')
-    print(f'\n\n\n { member_id }\n\n\n')
-    print(f'\n\n\n { plan_name }\n\n\n')
-
-    print(f'\n\n\n { amount }\n\n\n')
-
     Item_name = frappe.db.get_value("Workout Plan", plan_name, 'item')
     # intermediate
-
     items = [{"item_code": Item_name, "qty": 1, "rate": amount}]
 
     sales_invoice = frappe.get_doc({
@@ -109,13 +103,7 @@ def create_sales_invoice(member, member_id, plan_name, amount):
         "gym_member_id": member_id,
         "items": items
     })
-
     # frappe.throw('Error')
-
     sales_invoice.insert()
     sales_invoice.submit()
-    # frappe.db.commit()
-
     return True
-
-    # print(f"\n\n\n { items } \n\n\n")

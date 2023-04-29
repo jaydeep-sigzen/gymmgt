@@ -2,12 +2,6 @@
  {
   "block_modules": [
    {
-    "module": "Core",
-    "parent": "Gym Admin Module Profile",
-    "parentfield": "block_modules",
-    "parenttype": "Module Profile"
-   },
-   {
     "module": "Website",
     "parent": "Gym Admin Module Profile",
     "parentfield": "block_modules",
@@ -33,12 +27,6 @@
    },
    {
     "module": "Geo",
-    "parent": "Gym Admin Module Profile",
-    "parentfield": "block_modules",
-    "parenttype": "Module Profile"
-   },
-   {
-    "module": "Desk",
     "parent": "Gym Admin Module Profile",
     "parentfield": "block_modules",
     "parenttype": "Module Profile"
@@ -210,11 +198,17 @@
     "parent": "Gym Admin Module Profile",
     "parentfield": "block_modules",
     "parenttype": "Module Profile"
+   },
+   {
+    "module": "Desk",
+    "parent": "Gym Admin Module Profile",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
    }
   ],
   "docstatus": 0,
   "doctype": "Module Profile",
-  "modified": "2023-04-29 02:20:31.826060",
+  "modified": "2023-04-29 11:47:22.322454",
   "module_profile_name": "Gym Admin Module Profile",
   "name": "Gym Admin Module Profile"
  },

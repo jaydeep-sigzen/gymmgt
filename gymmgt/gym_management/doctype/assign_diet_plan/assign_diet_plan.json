@@ -13,9 +13,13 @@
   "company",
   "section_break_qzftn",
   "diet_goal",
+  "column_break_ax5hp",
   "status",
+  "section_break_tv9sl",
   "start_date",
+  "column_break_cfvvy",
   "end_date",
+  "diet_plan_details_section",
   "diet_plan_details"
  ],
  "fields": [
@@ -65,13 +69,30 @@
   {
    "fieldname": "diet_plan_details",
    "fieldtype": "Table",
-   "label": "Diet Plan Details",
+   "label": "Diet Plan",
    "options": "Diet Plan Details"
+  },
+  {
+   "fieldname": "column_break_ax5hp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_tv9sl",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_cfvvy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "diet_plan_details_section",
+   "fieldtype": "Section Break",
+   "label": "Diet Plan Details"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-04-29 02:38:31.856829",
+ "modified": "2023-04-29 12:51:03.897834",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Assign Diet Plan",

@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{member}",
+ "autoname": "format:MM-{member}{####}",
  "creation": "2023-04-25 02:11:38.583533",
  "default_view": "List",
  "doctype": "DocType",
@@ -56,10 +56,9 @@
   },
   {
    "fieldname": "next_measurement_date",
-   "fieldtype": "Data",
+   "fieldtype": "Date",
    "in_list_view": 1,
-   "label": "Next Measurement Date",
-   "reqd": 1
+   "label": "Next Measurement Date"
   },
   {
    "fieldname": "nutrition_value_section",
@@ -122,7 +121,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-04-29 03:15:37.148792",
+ "modified": "2023-04-29 12:35:39.627702",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Assign Member Metrics",
