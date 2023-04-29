@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"XSdE2FVDtL\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Gym Management</span>\",\"col\":12}},{\"id\":\"MbPWW4Iy3x\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gym Trainer\",\"col\":3}},{\"id\":\"LnlyHw8bak\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gym Members\",\"col\":3}},{\"id\":\"fDWiYGGKJy\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gym Membership\",\"col\":3}},{\"id\":\"_EuCiO1G9s\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Book Group Class\",\"col\":3}},{\"id\":\"L8XD9j296W\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Assign Workout Plan\",\"col\":3}},{\"id\":\"hlbJXlHnUb\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Assign Diet Plan\",\"col\":3}},{\"id\":\"xfLbofqD_m\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Assign Member Metrics\",\"col\":3}},{\"id\":\"UC4fC_2xiY\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Workout Plan\",\"col\":3}},{\"id\":\"OCCM0TxKJg\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Time Slot\",\"col\":3}}]",
+ "content": "[{\"id\":\"XSdE2FVDtL\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Gym Management</span>\",\"col\":12}},{\"id\":\"MbPWW4Iy3x\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gym Trainer\",\"col\":3}},{\"id\":\"LnlyHw8bak\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gym Members\",\"col\":3}},{\"id\":\"fDWiYGGKJy\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gym Membership\",\"col\":3}},{\"id\":\"_EuCiO1G9s\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Book Group Class\",\"col\":3}},{\"id\":\"L8XD9j296W\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Assign Workout Plan\",\"col\":3}},{\"id\":\"hlbJXlHnUb\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Assign Diet Plan\",\"col\":3}},{\"id\":\"xfLbofqD_m\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Assign Member Metrics\",\"col\":3}},{\"id\":\"T1TZE3yQ6S\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Assign Trainer Plan\",\"col\":3}},{\"id\":\"UC4fC_2xiY\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Workout Plan\",\"col\":3}},{\"id\":\"OCCM0TxKJg\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Time Slot\",\"col\":3}}]",
  "creation": "2023-04-26 11:15:42.342291",
  "docstatus": 0,
  "doctype": "Workspace",
@@ -11,7 +11,7 @@
  "is_hidden": 0,
  "label": "Gym Management",
  "links": [],
- "modified": "2023-04-29 12:46:51.619074",
+ "modified": "2023-04-29 13:26:50.931274",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gym Management",
@@ -59,6 +59,13 @@
    "doc_view": "List",
    "label": "Assign Member Metrics",
    "link_to": "Assign Member Metrics",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Assign Trainer Plan",
+   "link_to": "Assign Trainer Plan",
    "type": "DocType"
   },
   {

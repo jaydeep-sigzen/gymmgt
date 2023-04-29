@@ -143,9 +143,14 @@
    "group": "Group Class",
    "link_doctype": "Book Group Class",
    "link_fieldname": "assign_to_member"
+  },
+  {
+   "group": "Link Documents",
+   "link_doctype": "Assign Trainer Plan",
+   "link_fieldname": "assign_to_member"
   }
  ],
- "modified": "2023-04-29 03:53:23.917575",
+ "modified": "2023-04-29 13:30:09.124733",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gym Members",

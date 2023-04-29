@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:MM-{member}{####}",
+ "autoname": "format:MM-{assign_to_member}{####}",
  "creation": "2023-04-25 02:11:38.583533",
  "default_view": "List",
  "doctype": "DocType",
@@ -121,7 +121,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-04-29 12:35:39.627702",
+ "modified": "2023-04-29 15:49:04.415328",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Assign Member Metrics",

@@ -11,6 +11,7 @@
   "assign_to_member",
   "status",
   "column_break_9czyl",
+  "trainer",
   "workout_plan",
   "section_break_tdqj0",
   "start_date",
@@ -23,25 +24,30 @@
   {
    "fieldname": "workout_plan",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Workout Plan",
-   "options": "Workout Plan"
+   "options": "Workout Plan",
+   "reqd": 1
   },
   {
    "default": "Today",
    "fieldname": "start_date",
    "fieldtype": "Date",
-   "label": "Start Date"
+   "in_list_view": 1,
+   "label": "Start Date",
+   "reqd": 1
   },
   {
    "fieldname": "end_dtae",
-   "fieldtype": "Data",
+   "fieldtype": "Date",
    "label": "End Dtae"
   },
   {
    "fieldname": "exercise",
    "fieldtype": "Table",
    "label": "Exercise Detail",
-   "options": "Exercise"
+   "options": "Exercise",
+   "reqd": 1
   },
   {
    "fieldname": "exercise_section",
@@ -63,19 +69,30 @@
   {
    "fieldname": "assign_to_member",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Member",
-   "options": "Gym Members"
+   "options": "Gym Members",
+   "reqd": 1
   },
   {
    "fieldname": "status",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "label": "Status",
-   "options": "Active\nExpired"
+   "options": "Active\nExpired",
+   "reqd": 1
+  },
+  {
+   "fieldname": "trainer",
+   "fieldtype": "Link",
+   "label": "Trainer",
+   "options": "Gym Trainer",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-04-29 04:01:50.659642",
+ "modified": "2023-04-29 16:18:07.611204",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Assign Workout Plan",
@@ -121,5 +138,6 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "assign_to_member"
 }

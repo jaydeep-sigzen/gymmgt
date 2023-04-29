@@ -26,12 +26,22 @@ def get_permission_query_conditions_for_trainer(user):
     if not user:
         user = frappe.session.user
     full_name = get_user_name(user)
-    print(f" \n\n\n==>>full_name:{full_name}\n\n\n")
-    # frappe.throw('Error Trainer Query')
     user_roles = frappe.get_roles(user)
 
     if user != 'Administrator' and 'Gym Trainer' in user_roles:
         conditions = f'`tabGym Trainer`.`name` = "{full_name}"'
+        return conditions
+
+
+@frappe.whitelist()
+def get_permission_query_conditions_for_trainer_plan(user):
+    if not user:
+        user = frappe.session.user
+    full_name = get_user_name(user)
+    user_roles = frappe.get_roles(user)
+
+    if user != 'Administrator' and 'Gym Trainer' in user_roles:
+        conditions = f'`tabAssign Trainer Plan`.`trainer` = "{full_name}"'
         return conditions
 
 
@@ -44,6 +54,42 @@ def get_permission_query_conditions_for_membership(user):
     if user != 'Administrator' and 'Gym Member' in user_roles:
         conditions = f'`tabGym Membership`.`member` = "{full_name}"'
         print(f" \n\n\n==>>conditions:{conditions}\n\n\n")
+        return conditions
+
+
+@frappe.whitelist()
+def get_permission_query_conditions_for_member_metrics(user):
+    if not user:
+        user = frappe.session.user
+    full_name = get_user_name(user)
+    user_roles = frappe.get_roles(user)
+    if user != 'Administrator' and 'Gym Member' in user_roles:
+        conditions = f'`tabAssign Member Metrics`.`assign_to_member` = "{full_name}"'
+        return conditions
+
+
+@frappe.whitelist()
+def get_permission_query_conditions_for_group_class(user):
+    if not user:
+        user = frappe.session.user
+    full_name = get_user_name(user)
+    user_roles = frappe.get_roles(user)
+    if user != 'Administrator' and 'Gym Member' in user_roles:
+        conditions = f'`tabBook Group Class`.`assign_to_member` = "{full_name}"'
+        return conditions
+
+
+@frappe.whitelist()
+def get_permission_query_conditions_for_workout_plan(user):
+    if not user:
+        user = frappe.session.user
+    full_name = get_user_name(user)
+    user_roles = frappe.get_roles(user)
+    if user != 'Administrator' and 'Gym Member' in user_roles:
+        conditions = f'`tabAssign Workout Plan`.`assign_to_member` = "{full_name}"'
+        return conditions
+    elif user != 'Administrator' and 'Gym Trainer' in user_roles:
+        conditions = f'`tabAssign Workout Plan`.`trainer` = "{full_name}"'
         return conditions
 
 

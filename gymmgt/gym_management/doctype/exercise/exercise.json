@@ -36,6 +36,7 @@
   {
    "fieldname": "body_part",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Body Part",
    "options": "Body Part",
    "reqd": 1
@@ -44,7 +45,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-04-29 02:48:13.731569",
+ "modified": "2023-04-29 13:46:54.713080",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Exercise",

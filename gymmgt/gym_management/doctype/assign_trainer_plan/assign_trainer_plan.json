@@ -1,42 +1,35 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:GC{DD}{MM}{YY}{###}",
- "creation": "2023-04-26 18:15:57.388658",
+ "autoname": "format:TP-{trainer}{####}",
+ "creation": "2023-04-29 13:21:50.349041",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
   "assign_to_member",
-  "time_slot",
-  "column_break_y6llw",
-  "group_class",
-  "activate_date",
-  "amended_from"
+  "column_break_5z4e8",
+  "trainer",
+  "section_break_ttzrq",
+  "plan_type"
  ],
  "fields": [
   {
-   "fieldname": "time_slot",
+   "fieldname": "plan_type",
    "fieldtype": "Link",
    "in_list_view": 1,
-   "label": "Time Slot",
-   "options": "Time Slot",
+   "label": "Plan Type",
+   "options": "Trainer Plan",
    "reqd": 1
   },
   {
-   "fieldname": "amended_from",
+   "fieldname": "trainer",
    "fieldtype": "Link",
-   "label": "Amended From",
-   "no_copy": 1,
-   "options": "Book Group Class",
-   "print_hide": 1,
-   "read_only": 1
-  },
-  {
-   "fieldname": "activate_date",
-   "fieldtype": "Date",
-   "label": "Activate Date"
+   "in_list_view": 1,
+   "label": "Trainer",
+   "options": "Gym Trainer",
+   "reqd": 1
   },
   {
    "fieldname": "assign_to_member",
@@ -47,24 +40,20 @@
    "reqd": 1
   },
   {
-   "fieldname": "group_class",
-   "fieldtype": "Link",
-   "label": "Group Class",
-   "options": "Group Class Type",
-   "reqd": 1
+   "fieldname": "column_break_5z4e8",
+   "fieldtype": "Column Break"
   },
   {
-   "fieldname": "column_break_y6llw",
-   "fieldtype": "Column Break"
+   "fieldname": "section_break_ttzrq",
+   "fieldtype": "Section Break"
   }
  ],
  "index_web_pages_for_search": 1,
- "is_submittable": 1,
  "links": [],
- "modified": "2023-04-29 17:16:09.302928",
+ "modified": "2023-04-29 15:45:33.715675",
  "modified_by": "Administrator",
  "module": "Gym Management",
- "name": "Book Group Class",
+ "name": "Assign Trainer Plan",
  "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
@@ -88,10 +77,18 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Gym Member",
+   "role": "Gym Trainer",
    "share": 1,
-   "submit": 1,
    "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Gym Member",
+   "share": 1
   },
   {
    "create": 1,
@@ -103,12 +100,10 @@
    "report": 1,
    "role": "Gym Admin",
    "share": 1,
-   "submit": 1,
    "write": 1
   }
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": [],
- "track_changes": 1
+ "states": []
 }

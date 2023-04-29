@@ -9,6 +9,7 @@
  "engine": "InnoDB",
  "field_order": [
   "assign_to_member",
+  "trainer",
   "column_break_nhomm",
   "company",
   "section_break_qzftn",
@@ -88,11 +89,17 @@
    "fieldname": "diet_plan_details_section",
    "fieldtype": "Section Break",
    "label": "Diet Plan Details"
+  },
+  {
+   "fieldname": "trainer",
+   "fieldtype": "Link",
+   "label": "Trainer",
+   "options": "Gym Trainer"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-04-29 12:51:03.897834",
+ "modified": "2023-04-29 16:30:00.695797",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Assign Diet Plan",
