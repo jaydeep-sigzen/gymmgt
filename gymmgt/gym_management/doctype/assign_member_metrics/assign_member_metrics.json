@@ -110,6 +110,7 @@
    "fieldname": "assign_to_member",
    "fieldtype": "Link",
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Assign to Member",
    "options": "Gym Members",
    "reqd": 1
@@ -121,7 +122,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-04-29 15:49:04.415328",
+ "modified": "2023-04-30 02:16:17.848768",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Assign Member Metrics",
