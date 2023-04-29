@@ -10,7 +10,7 @@
  "idx": 0,
  "is_standard": "Yes",
  "json": "{}",
- "modified": "2023-04-29 23:27:58.989587",
+ "modified": "2023-04-30 04:06:24.858558",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Revenue",
@@ -20,9 +20,6 @@
  "report_name": "Revenue",
  "report_type": "Report Builder",
  "roles": [
-  {
-   "role": "Gym Member"
-  },
   {
    "role": "Gym Admin"
   },

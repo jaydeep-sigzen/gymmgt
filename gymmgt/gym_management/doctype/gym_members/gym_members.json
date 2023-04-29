@@ -44,7 +44,6 @@
    "reqd": 1
   },
   {
-   "default": "+91-9904026960",
    "fieldname": "mobile_number",
    "fieldtype": "Phone",
    "in_list_view": 1,
@@ -150,7 +149,7 @@
    "link_fieldname": "assign_to_member"
   }
  ],
- "modified": "2023-04-29 13:30:09.124733",
+ "modified": "2023-04-30 03:12:50.693079",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gym Members",
