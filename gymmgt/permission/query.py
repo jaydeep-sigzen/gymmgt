@@ -99,3 +99,17 @@ def get_user_name(user):
         user_doc = frappe.get_doc('User', user)
         user_name = user_doc.full_name
         return user_name
+
+
+@frappe.whitelist()
+def get_permission_query_conditions_for_trainer_rating(user):
+    if not user:
+        user = frappe.session.user
+    full_name = get_user_name(user)
+    user_roles = frappe.get_roles(user)
+    if user != 'Administrator' and 'Gym Member' in user_roles:
+        conditions = f'`tabTrainer Rating`.`member` = "{full_name}"'
+        return conditions
+    elif user != 'Administrator' and 'Gym Trainer' in user_roles:
+        conditions = f'`tabTrainer Rating`.`trainer` = "{full_name}"'
+        return conditions

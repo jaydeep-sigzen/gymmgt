@@ -102,7 +102,9 @@ permission_query_conditions = {
     "Assign Workout Plan":
     "gymmgt.permission.query.get_permission_query_conditions_for_workout_plan",
     "Assign Trainer Plan":
-    "gymmgt.permission.query.get_permission_query_conditions_for_trainer_plan"
+    "gymmgt.permission.query.get_permission_query_conditions_for_trainer_plan",
+    "Trainer Rating":
+    "gymmgt.permission.query.get_permission_query_conditions_for_trainer_rating",
 }
 
 #
