@@ -35,3 +35,6 @@ Gym Member Module Profile-- Only access Gym Managemment
 bench get-app https://github.com/jaydeep-sigzen/gymmgt.git
 
 bench --site *site_name* install-app gymmgt
+
+bench --site *site_name* migrate
+
