@@ -50,7 +50,6 @@
    "reqd": 1
   },
   {
-   "default": "+91-",
    "fieldname": "mobile_number",
    "fieldtype": "Phone",
    "in_list_view": 1,
@@ -91,7 +90,7 @@
  "has_web_view": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-04-29 03:00:53.680250",
+ "modified": "2023-04-30 20:10:44.563213",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gym Trainer",
