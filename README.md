@@ -19,10 +19,13 @@ Gym Member
 
 #### Role Profile Created
 Gym Trainer
+
 Gym Member
 
 #### Module Profile Created
 
 Gym Admin Module Profile -- Only access Gym Managemment amd Core Modules
-Gym Trainer Module Profile-- Only access Gym Managemment.
-Gym Member Module Profile-- Only access Gym Managemment.
+
+Gym Trainer Module Profile-- Only access Gym Managemment
+
+Gym Member Module Profile-- Only access Gym Managemment
