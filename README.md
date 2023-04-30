@@ -8,7 +8,21 @@ MIT
 
 #### Version Dependancy
 ERPNext: v14.23.0 (version-14)
-
 Frappe Framework: v14.34.0 (version-14)
-
 Gym Management: v0.0.1
+
+#### Role Created
+Gym Admin
+Gym Trainer
+Gym Member
+
+
+#### Role Profile Created
+Gym Trainer
+Gym Member
+
+#### Module Profile Created
+
+Gym Admin Module Profile -- Only access Gym Managemment amd Core Modules
+Gym Trainer Module Profile-- Only access Gym Managemment.
+Gym Member Module Profile-- Only access Gym Managemment.
