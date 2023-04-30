@@ -31,7 +31,6 @@ def get_data(filters):
         all_trainers = frappe.db.get_list('Gym Trainer',
                                           fields=['trainer_name'])
         for trainer in all_trainers:
-            print(f"\n\n\n trainer===> {trainer.get('trainer_name')}\n\n\n")
             my_query1 = f"""
 			SELECT
 				trainer,
