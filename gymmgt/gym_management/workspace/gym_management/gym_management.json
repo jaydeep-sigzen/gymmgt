@@ -15,7 +15,7 @@
    "hidden": 0,
    "is_query_report": 0,
    "label": "Report Master",
-   "link_count": 2,
+   "link_count": 3,
    "onboard": 0,
    "type": "Card Break"
   },
@@ -38,9 +38,19 @@
    "link_type": "Report",
    "onboard": 0,
    "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Top Trainers Report",
+   "link_count": 0,
+   "link_to": "Top Trainers Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   }
  ],
- "modified": "2023-04-30 12:41:49.446183",
+ "modified": "2023-04-30 13:29:49.527383",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gym Management",

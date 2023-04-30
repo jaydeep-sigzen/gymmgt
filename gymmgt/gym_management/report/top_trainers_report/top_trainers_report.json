@@ -1,0 +1,29 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2023-04-30 13:25:41.059683",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "modified": "2023-04-30 13:30:31.466024",
+ "modified_by": "Administrator",
+ "module": "Gym Management",
+ "name": "Top Trainers Report",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "ref_doctype": "Trainer Rating",
+ "report_name": "Top Trainers Report",
+ "report_type": "Script Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "Gym Admin"
+  }
+ ]
+}
