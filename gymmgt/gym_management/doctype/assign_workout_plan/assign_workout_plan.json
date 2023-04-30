@@ -1,0 +1,143 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:WP{#####}",
+ "creation": "2023-04-29 03:27:25.908286",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "assign_to_member",
+  "status",
+  "column_break_9czyl",
+  "trainer",
+  "workout_plan",
+  "section_break_tdqj0",
+  "start_date",
+  "column_break_nvrnh",
+  "end_dtae",
+  "exercise_section",
+  "exercise"
+ ],
+ "fields": [
+  {
+   "fieldname": "workout_plan",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Workout Plan",
+   "options": "Workout Plan",
+   "reqd": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "end_dtae",
+   "fieldtype": "Date",
+   "label": "End Dtae"
+  },
+  {
+   "fieldname": "exercise",
+   "fieldtype": "Table",
+   "label": "Exercise Detail",
+   "options": "Exercise",
+   "reqd": 1
+  },
+  {
+   "fieldname": "exercise_section",
+   "fieldtype": "Section Break",
+   "label": "Exercise"
+  },
+  {
+   "fieldname": "column_break_9czyl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_tdqj0",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_nvrnh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "assign_to_member",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Member",
+   "options": "Gym Members",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Active\nExpired",
+   "reqd": 1
+  },
+  {
+   "fieldname": "trainer",
+   "fieldtype": "Link",
+   "label": "Trainer",
+   "options": "Gym Trainer",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-04-29 16:18:07.611204",
+ "modified_by": "Administrator",
+ "module": "Gym Management",
+ "name": "Assign Workout Plan",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Gym Trainer",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Gym Member",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "assign_to_member"
+}

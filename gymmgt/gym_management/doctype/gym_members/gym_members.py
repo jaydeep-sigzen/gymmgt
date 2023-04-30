@@ -27,4 +27,4 @@ class GymMembers(Document):
             customer.customer_group = "Individual"
             customer.territory = "India"
             customer.save()
-            frappe.msgprint('CUstomer Created')
+            frappe.msgprint('Customer Created')

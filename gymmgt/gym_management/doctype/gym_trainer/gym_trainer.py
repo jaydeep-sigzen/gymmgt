@@ -31,7 +31,7 @@ class GymTrainer(WebsiteGenerator):
             customer.customer_group = "Commercial"
             customer.territory = "India"
             customer.save()
-            frappe.msgprint('CUstomer Created')
+            frappe.msgprint('Customer Created')
 
 
 @frappe.whitelist()
@@ -45,6 +45,7 @@ def create_user(user_name, email_id):
             'enabled': 1,
             'role_profile_name': "Gym Trainer",
             'user_type': "System User",
+            'module_profile': "Gym Trainer Module Profile"
         })
         user.insert(ignore_permissions=True)
         frappe.msgprint('User Created')

@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"XSdE2FVDtL\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Gym Management</span>\",\"col\":12}},{\"id\":\"MbPWW4Iy3x\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gym Trainer\",\"col\":3}},{\"id\":\"LnlyHw8bak\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gym Members\",\"col\":3}},{\"id\":\"fDWiYGGKJy\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gym Membership\",\"col\":3}},{\"id\":\"_EuCiO1G9s\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Book Group Class\",\"col\":3}},{\"id\":\"hlbJXlHnUb\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Assign Diet Plan\",\"col\":3}},{\"id\":\"xfLbofqD_m\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Assign Member Metrics\",\"col\":3}},{\"id\":\"UC4fC_2xiY\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Workout Plan\",\"col\":3}},{\"id\":\"uuvPrUe2jU\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Gym Setting</b></span>\",\"col\":12}}]",
+ "content": "[{\"id\":\"XSdE2FVDtL\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Gym Management</span>\",\"col\":12}},{\"id\":\"MbPWW4Iy3x\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gym Trainer\",\"col\":3}},{\"id\":\"LnlyHw8bak\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gym Members\",\"col\":3}},{\"id\":\"fDWiYGGKJy\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gym Membership\",\"col\":3}},{\"id\":\"_EuCiO1G9s\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Book Group Class\",\"col\":3}},{\"id\":\"L8XD9j296W\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Assign Workout Plan\",\"col\":3}},{\"id\":\"hlbJXlHnUb\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Assign Diet Plan\",\"col\":3}},{\"id\":\"xfLbofqD_m\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Assign Member Metrics\",\"col\":3}},{\"id\":\"T1TZE3yQ6S\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Assign Trainer Plan\",\"col\":3}},{\"id\":\"UC4fC_2xiY\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Workout Plan\",\"col\":3}},{\"id\":\"OCCM0TxKJg\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Time Slot\",\"col\":3}},{\"id\":\"sm6ZGdlfpi\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Store Room\",\"col\":3}},{\"id\":\"ZLD0_YSlr3\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Trainer Rating\",\"col\":3}},{\"id\":\"pw5XEB8jph\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gym Settings\",\"col\":3}},{\"id\":\"R24V2Ra7eo\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"YLv2KDSrGc\",\"type\":\"card\",\"data\":{\"card_name\":\"Report Master\",\"col\":4}},{\"id\":\"a9gKCbNmDj\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Active Customer\",\"col\":4}},{\"id\":\"Z8pXmHLeR2\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Outgoing Bills\",\"col\":4}}]",
  "creation": "2023-04-26 11:15:42.342291",
  "docstatus": 0,
  "doctype": "Workspace",
@@ -10,12 +10,50 @@
  "idx": 0,
  "is_hidden": 0,
  "label": "Gym Management",
- "links": [],
- "modified": "2023-04-28 11:43:25.563594",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Report Master",
+   "link_count": 2,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Revenue Report",
+   "link_count": 0,
+   "link_to": "Revenue",
+   "link_type": "Report",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Fitness Journey",
+   "link_count": 0,
+   "link_to": "Fitness Journey",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2023-04-30 12:41:49.446183",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gym Management",
- "number_cards": [],
+ "number_cards": [
+  {
+   "label": "Outgoing Bills",
+   "number_card_name": "Total Outgoing Bills"
+  },
+  {
+   "label": "Active Customer",
+   "number_card_name": "Active Customers"
+  }
+ ],
  "owner": "Administrator",
  "parent_page": "",
  "public": 1,
@@ -36,6 +74,13 @@
   {
    "color": "Grey",
    "doc_view": "List",
+   "label": "Trainer Rating",
+   "link_to": "Trainer Rating",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
    "label": "Workout Plan",
    "link_to": "Workout Plan",
    "type": "DocType"
@@ -43,8 +88,43 @@
   {
    "color": "Grey",
    "doc_view": "List",
+   "label": "Time Slot",
+   "link_to": "Time Slot",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Assign Workout Plan",
+   "link_to": "Assign Workout Plan",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Gym Settings",
+   "link_to": "Gym Settings",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
    "label": "Assign Member Metrics",
    "link_to": "Assign Member Metrics",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Store Room",
+   "link_to": "Store Room",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Assign Trainer Plan",
+   "link_to": "Assign Trainer Plan",
    "type": "DocType"
   },
   {

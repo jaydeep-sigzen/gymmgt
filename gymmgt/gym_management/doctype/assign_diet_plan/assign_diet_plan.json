@@ -9,13 +9,18 @@
  "engine": "InnoDB",
  "field_order": [
   "assign_to_member",
+  "trainer",
   "column_break_nhomm",
   "company",
   "section_break_qzftn",
   "diet_goal",
+  "column_break_ax5hp",
   "status",
+  "section_break_tv9sl",
   "start_date",
+  "column_break_cfvvy",
   "end_date",
+  "diet_plan_details_section",
   "diet_plan_details"
  ],
  "fields": [
@@ -65,13 +70,36 @@
   {
    "fieldname": "diet_plan_details",
    "fieldtype": "Table",
-   "label": "Diet Plan Details",
+   "label": "Diet Plan",
    "options": "Diet Plan Details"
+  },
+  {
+   "fieldname": "column_break_ax5hp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_tv9sl",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_cfvvy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "diet_plan_details_section",
+   "fieldtype": "Section Break",
+   "label": "Diet Plan Details"
+  },
+  {
+   "fieldname": "trainer",
+   "fieldtype": "Link",
+   "label": "Trainer",
+   "options": "Gym Trainer"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-04-25 02:16:47.203532",
+ "modified": "2023-04-29 16:30:00.695797",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Assign Diet Plan",
@@ -87,6 +115,30 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Gym Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Gym Trainer",
    "share": 1,
    "write": 1
   }

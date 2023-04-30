@@ -12,17 +12,20 @@
   "registration_fee",
   "column_break_zggqj",
   "default_days",
-  "no_of_locker"
+  "no_of_locker",
+  "default_diet_plan_days"
  ],
  "fields": [
   {
+   "default": "1000",
    "fieldname": "registration_fee",
    "fieldtype": "Currency",
    "label": "Registration Fee"
   },
   {
+   "default": "30",
    "fieldname": "default_days",
-   "fieldtype": "Data",
+   "fieldtype": "Int",
    "label": "Default Days"
   },
   {
@@ -45,12 +48,18 @@
    "fieldtype": "Check",
    "label": "Link To Customer",
    "read_only": 1
+  },
+  {
+   "default": "30",
+   "fieldname": "default_diet_plan_days",
+   "fieldtype": "Int",
+   "label": "Default Diet Plan Days"
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2023-04-25 19:07:57.568546",
+ "modified": "2023-04-28 12:58:56.816475",
  "modified_by": "Administrator",
  "module": "Gym Management",
  "name": "Gym Settings",
@@ -63,6 +72,16 @@
    "print": 1,
    "read": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Gym Admin",
    "share": 1,
    "write": 1
   }
