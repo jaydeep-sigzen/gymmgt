@@ -53,7 +53,6 @@ def get_permission_query_conditions_for_membership(user):
     user_roles = frappe.get_roles(user)
     if user != 'Administrator' and 'Gym Member' in user_roles:
         conditions = f'`tabGym Membership`.`member` = "{full_name}"'
-        print(f" \n\n\n==>>conditions:{conditions}\n\n\n")
         return conditions
 
 

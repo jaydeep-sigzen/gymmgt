@@ -12,33 +12,42 @@ def execute(filters=None):
 
 def get_data(filters):
     conditions = "1=1"
+    data = []
 
     if (filters.get("trainer_name")):
         conditions += f" AND trainer='{filters.get('trainer_name')}'"
-
-    my_query = f"""
+        my_query = f"""
 		SELECT
 			trainer,
-			rating
+			AVG(rating) AS avg_rating,
+			COUNT(*) AS member
 		FROM 
   			`tabTrainer Rating`
 		WHERE
-			{conditions}
-	"""
-
-    data = frappe.db.sql(my_query)
-    print(f" \n\n\n==>>data:{data}\n\n\n")
+			{conditions}	
+		"""
+        data = frappe.db.sql(my_query)
+    else:
+        all_trainers = frappe.db.get_list('Gym Trainer',
+                                          fields=['trainer_name'])
+        for trainer in all_trainers:
+            my_query1 = f"""
+			SELECT
+				trainer,
+				AVG(rating) AS avg_rating,
+				COUNT(*) AS member
+			FROM 
+				`tabTrainer Rating`
+			GROUP BY Trainer	
+			"""
+            data = frappe.db.sql(my_query1)
     return data
-
-    # Skip Below Code
-    # frappe.throw('Error Report Rating')
-    return calculate_average_rating(data)
 
 
 def get_columns():
     return [
-        "Trainer Name:Link/Gym Trainer:200",
-        "Rating:Rating:200",
+        "Trainer Name:Link/Gym Trainer:200", "Avg Rating:Rating:200",
+        "Members Rating Count:Data:200"
     ]
 
 

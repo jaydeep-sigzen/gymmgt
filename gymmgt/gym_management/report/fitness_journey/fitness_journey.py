@@ -11,7 +11,6 @@ def execute(filters=None):
 
 
 def get_data(filters):
-    print(f" \n\n\n==>>filters:{filters}")
     conditions = "1=1"
 
     if (filters.get("assign_to_member")):
