@@ -7,7 +7,26 @@ import frappe
 def execute(filters=None):
     columns = get_columns()
     data = get_data(filters)
-    return columns, data
+    labels = []
+    values = []
+    for i in data:
+        print(f'\n\n\n {i}\n\n\n====>')
+        labels.append(i[0])
+        values.append(i[1])
+
+    chart = {
+        "type": "bar",
+        "data": {
+            "labels": labels,
+            "datasets": [
+                {
+                    "values": values
+                },
+            ],
+        },
+    }
+
+    return columns, data, "Calories Progress Report: Burn Calories vs Date", chart
 
 
 def get_data(filters):
