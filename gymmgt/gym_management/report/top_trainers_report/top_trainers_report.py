@@ -26,7 +26,7 @@ def execute(filters=None):
         },
     }
 
-    return columns, data, "Calories Progress Report: Burn Calories vs Date", chart
+    return columns, data, "Trainer Average Rating", chart
 
 
 def get_data(filters):
