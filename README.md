@@ -49,4 +49,7 @@ bench --site *site_name* migrate
 
 4> Now Gym Admin have all access for the Gym Managment.
 
+Note - After successfully add Gym Member Or Gym Trainer we have to manualu create user by click Create button on top of created user details.
+
+
 
