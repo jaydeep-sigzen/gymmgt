@@ -38,3 +38,13 @@ bench --site *site_name* install-app gymmgt
 
 bench --site *site_name* migrate
 
+#### Steps
+1> Create one Gynm Admin user from Administrator user with select Gym Admin Role AND  Gym Admin Module Profile.
+2> Set Password for the Gym Admin
+3> Login with Gym Admin User
+
+![Screenshot from 2023-05-02 13-21-05](https://user-images.githubusercontent.com/127377825/235610187-bd01dabf-612c-45be-8621-f9220fbbb83f.png)
+
+4> Now Gym Admin have all access for the Gym Managment.
+
+
