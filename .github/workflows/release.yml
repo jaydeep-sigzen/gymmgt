@@ -1,26 +1,19 @@
-# https://docs.github.com/en/actions
-
-name: "Release"
-
-on: # yamllint disable-line rule:truthy
+name: Release
+'on':
   push:
     tags:
-      - "**"
-
+      - '**'
 jobs:
   release:
-    name: "Release"
-
-    runs-on: "ubuntu-latest"
-
+    name: Release
+    runs-on: ubuntu-latest
     steps:
-      - name: "Determine tag"
-        run: "echo \"RELEASE_TAG=${GITHUB_REF#refs/tags/}\" >> $GITHUB_ENV"
-
-      - name: "Create release"
-        uses: actions/checkout@v3
+      - name: Determine tag
+        run: 'echo "RELEASE_TAG=${GITHUB_REF#refs/tags/}" >> $GITHUB_ENV'
+      - name: Create release
+      - uses: actions/checkout@v3
         with:
-          github-token: "${{ secrets.GITHUB_TOKEN }}"
+          github-token: '${{ secrets.GITHUB_TOKEN }}'
           script: |
             try {
               const response = await github.rest.repos.createRelease({
