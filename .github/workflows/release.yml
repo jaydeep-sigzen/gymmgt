@@ -10,4 +10,4 @@ jobs:
       - name: Create release
         uses: ergebnis/.github/actions/github/release/create@1.8.0
         with:
-          github-token: '${{ secrets.ERGEBNIS_BOT_TOKEN }}'
+          github-token: '${{ secrets.GITHUB_TOKEN }}'
