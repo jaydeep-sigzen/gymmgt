@@ -2,6 +2,7 @@
   push:
     tags:
       - '*'
+      
 jobs:
   release:
     name: Release
