@@ -1,14 +1,19 @@
-'on':
+name: "Release"
+
+on:
   push:
     tags:
-      - '*'
-      
+      - "**"
+
 jobs:
   release:
-    name: Release
-    runs-on: ubuntu-latest
+    name: "Release"
+
+    runs-on: "ubuntu-latest"
+
     steps:
-      - name: Create release
-        uses: ergebnis/.github/actions/github/release/create@1.8.0
+      - name: "Create release"
+        uses: "ergebnis/.github/actions/github/release/create@1.8.0"
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: '${{ secrets.GITHUB_TOKEN }}'
+          
