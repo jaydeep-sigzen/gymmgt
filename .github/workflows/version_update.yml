@@ -1,18 +1,13 @@
 name: CI/CD Workflow
 
 on:
-  push:
+  pull_request:
     types:
       - closed
-    branches:
-      - master
 
 jobs:
-  build:
-    if: github.event.pull_request.merged == true
+  ci-cd:
     runs-on: ubuntu-latest
-    permissions:
-        contents: write
 
     steps:
     - name: Checkout code
@@ -21,19 +16,19 @@ jobs:
     - name: Set up Git
       run: git config --global user.email "actions@github.com" && git config --global user.name "GitHub Actions"
 
-    - name: Determine version
-      id: determine_version
-      run: echo "::set-output name=version::$(bash determine_version.sh)"  # Replace with the script or command to determine version
+    - name: Get version from package.json
+      id: get_version
+      run: echo "::set-output name=version::$(jq -r '.version' package.json)"
 
     - name: Create tag
       run: |
-        version="${{ steps.determine_version.outputs.version }}"
+        version="${{ steps.get_version.outputs.version }}"
         git tag -a "v${version}" -m "Version ${version}"
         git push origin "v${version}"
 
     - name: Create release
       run: |
-        gh release create "v${{ steps.determine_version.outputs.version }}" -t "Release v${{ steps.determine_version.outputs.version }}" -n "Release notes for v${{ steps.determine_version.outputs.version }}"
+        gh release create "v${{ steps.get_version.outputs.version }}" -t "Release v${{ steps.get_version.outputs.version }}" -n "Release notes for v${{ steps.get_version.outputs.version }}"
 
     - name: Get previous tag
       id: get_prev_tag
@@ -42,5 +37,5 @@ jobs:
     - name: Create release note from comparison
       run: |
         previous_tag="${{ steps.get_prev_tag.outputs.prev_tag }}"
-        current_tag="v${{ steps.determine_version.outputs.version }}"
+        current_tag="v${{ steps.get_version.outputs.version }}"
         gh release create "${current_tag}" $(git log --pretty=format:'- [%h] %s (%an)' "${previous_tag}".."${current_tag}")
