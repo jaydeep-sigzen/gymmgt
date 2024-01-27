@@ -20,12 +20,12 @@ jobs:
 
     - name: Get version from __init__ file
       id: get_version
-      run: echo "version=$(grep -Po "(?<=__version__ = ')[^']+" ./gymmgt/__init__.py)"
+      run: echo "version=$(grep -Po "(?<=__version__ = ')[^']+" ./gymmgt/__init__.py)" >> $GITHUB_OUTPUT
 
 
     - name: Create tag
       run: |
-        version="${{ steps.get_version.version }}"
+        version="${{ steps.get_version.outputs.version }}"
         git tag -a "${version}" -m "Version ${version}"
         git push origin "${version}"
 
