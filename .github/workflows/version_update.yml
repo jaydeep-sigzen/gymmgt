@@ -29,6 +29,8 @@ jobs:
         git push origin "v${version}"
 
     - name: Create release
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         gh release create "v${{ steps.get_version.outputs.version }}" -t "Release v${{ steps.get_version.outputs.version }}" -n "Release notes for v${{ steps.get_version.outputs.version }}"
 
