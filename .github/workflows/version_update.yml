@@ -47,9 +47,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        previous_tag="2.0.4"
-        current_tag="${{ steps.get_version.outputs.version }}"
-        git rev-list --ancestry-path "${previous_tag}..${current_tag}" > commit_range.txt
-        gh release create "${current_tag}" --notes-file <(git log --pretty=format:'- [%h] %s (%an)' -- $(cat commit_range.txt))
-        rm commit_range.txt
+        previous_tag="${{ steps.get_prev_tag.outputs.prev_tag }}"
+        current_tag="v${{ steps.get_version.outputs.version }}"
+        gh release create "${current_tag}" $(git log --pretty=format:'- [%h] %s (%an)' -- "${previous_tag}".."${current_tag}")
 
