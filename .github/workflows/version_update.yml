@@ -37,7 +37,7 @@ jobs:
 
     - name: Get previous tag
       id: get_prev_tag
-      run: echo "prev_tag=$(git describe --tags --abbrev=0 HEAD^)" >> $GITHUB_OUTPUT
+      run: echo "prev_tag=$(git describe --tags --abbrev=0 HEAD^ 2>/dev/null || echo 'NoPreviousTag')" >> $GITHUB_OUTPUT
 
     - name: Create release note from comparison
       env:
