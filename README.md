@@ -6,7 +6,6 @@ A gym management system is a software application designed to help gym owners an
 
 #### License
 
-
 MIT
 
 
