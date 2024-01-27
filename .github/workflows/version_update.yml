@@ -25,9 +25,9 @@ jobs:
 
     - name: Create tag
       run: |
-        version="${{ steps.get_version.outputs.version }}"
-        git tag -a "v${version}" -m "Version ${version}"
-        git push origin "v${version}"
+        version="${{ steps.get_version.version }}"
+        git tag -a "${version}" -m "Version ${version}"
+        git push origin "${version}"
 
     - name: Create release
       env:
