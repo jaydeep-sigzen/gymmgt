@@ -49,6 +49,10 @@ jobs:
       run: |
         previous_tag="2.0.4"
         current_tag="${{ steps.get_version.outputs.version }}"
-        commit_range=$(git rev-list --ancestry-path "${previous_tag}..${current_tag}")
-        gh release create "${current_tag}" --notes <(git log --pretty=format:'- [%h] %s (%an)' -- $commit_range)
+        git rev-list --ancestry-path "${previous_tag}..${current_tag}" > commit_range.txt
+        gh release create "${current_tag}" --notes-file <(git log --pretty=format:'- [%h] %s (%an)' -- $(cat commit_range.txt))
+        rm commit_range.txt
+
+        # commit_range=$(git rev-list --ancestry-path "${previous_tag}..${current_tag}")
+        # gh release create "${current_tag}" --notes <(git log --pretty=format:'- [%h] %s (%an)' -- $commit_range)
 
