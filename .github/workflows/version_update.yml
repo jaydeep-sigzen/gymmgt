@@ -53,6 +53,3 @@ jobs:
         gh release create "${current_tag}" --notes-file <(git log --pretty=format:'- [%h] %s (%an)' -- $(cat commit_range.txt))
         rm commit_range.txt
 
-        # commit_range=$(git rev-list --ancestry-path "${previous_tag}..${current_tag}")
-        # gh release create "${current_tag}" --notes <(git log --pretty=format:'- [%h] %s (%an)' -- $commit_range)
-
