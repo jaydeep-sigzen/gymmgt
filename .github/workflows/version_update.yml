@@ -1,0 +1,55 @@
+name: CI/CD Workflow
+
+on:
+  pull_request:
+    types:
+      - closed
+
+jobs:
+  ci-cd:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+      with:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Set up Git
+      run: git config --global user.email "jaydeep@sigzen.com" && git config --global user.name "Jaydeep"
+
+    - name: Get version from __init__ file
+      id: get_version
+      run: echo "version=$(grep -Po "(?<=__version__ = ')[^']+" ./gymmgt/__init__.py)" >> $GITHUB_OUTPUT
+
+
+    - name: Create tag
+      run: |
+        version="${{ steps.get_version.outputs.version }}"
+        git tag -a "${version}" -m "Version ${version}"
+        git push origin "${version}"
+
+    - name: Create release
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        gh release create "${{ steps.get_version.outputs.version }}" -t "Release ${{ steps.get_version.outputs.version }}" -n "Release notes for ${{ steps.get_version.outputs.version }}"
+
+    - name: Get previous tag
+      id: get_prev_tag
+      # run: echo "prev_tag=$(git describe --tags --abbrev=0 HEAD^)" >> $GITHUB_OUTPUT
+      # run: echo "prev_tag=$(git describe --tags --abbrev=0 || echo '2.0.0')" >> $GITHUB_OUTPUT
+      run: |
+        echo "prev_tag=$(git describe --tags --abbrev=0 $(git rev-list --tags --skip=1 --max-count=1))" >> $GITHUB_OUTPUT
+
+
+    - name: Create release note from comparison
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        previous_tag="2.0.4"
+        current_tag="${{ steps.get_version.outputs.version }}"
+        commit_range=$(git rev-list --ancestry-path "${previous_tag}..${current_tag}")
+        gh release create "${current_tag}" --notes <(git log --pretty=format:'- [%h] %s (%an)' -- $commit_range)
+        commit_range=$(git rev-list --ancestry-path "${previous_tag}..${current_tag}")
+        gh release create "${current_tag}" --notes <(git log --pretty=format:'- [%h] %s (%an)' -- $commit_range)
