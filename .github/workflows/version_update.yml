@@ -41,7 +41,6 @@ jobs:
       # run: echo "prev_tag=$(git describe --tags --abbrev=0 || echo '2.0.0')" >> $GITHUB_OUTPUT
       run: |
         echo "prev_tag=$(git describe --tags --abbrev=0 $(git rev-list --tags --skip=1 --max-count=1))" >> $GITHUB_OUTPUT
-        previous_tag="${{ prev_tag }}"
 
 
     - name: Create release note from comparison
