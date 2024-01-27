@@ -41,7 +41,7 @@ jobs:
       # run: echo "prev_tag=$(git describe --tags --abbrev=0 || echo '2.0.0')" >> $GITHUB_OUTPUT
       run: |
         echo "prev_tag=$(git describe --tags --abbrev=0 $(git rev-list --tags --skip=1 --max-count=1))" >> $GITHUB_OUTPUT
-        previous_tag="${{ steps.get_prev_tag.outputs.prev_tag }}"
+        previous_tag="${{ prev_tag }}"
 
 
     - name: Create release note from comparison
@@ -50,4 +50,6 @@ jobs:
       run: |
         previous_tag="2.0.4"
         current_tag="${{ steps.get_version.outputs.version }}"
-        gh release create "${current_tag}" $(git log --pretty=format:'- [%h] %s (%an)' "${previous_tag}".."${current_tag}")
+        commit_range=$(git rev-list --ancestry-path "${previous_tag}..${current_tag}")
+        gh release create "${current_tag}" $(git log --pretty=format:'- [%h] %s (%an)' $commit_range)
+
