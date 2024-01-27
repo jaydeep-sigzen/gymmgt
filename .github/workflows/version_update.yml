@@ -47,7 +47,8 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        previous_tag="2.0.17"
-        current_tag="v${{ steps.get_version.outputs.version }}"
+        previous_tag="2.0.18"
+        current_tag="${{ steps.get_version.outputs.version }}"
         gh release create "${current_tag}" $(git log --pretty=format:'- [%h] %s (%an)' -- "${previous_tag}".."${current_tag}")
+        
 
