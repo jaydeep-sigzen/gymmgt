@@ -20,7 +20,7 @@ jobs:
 
     - name: Get version from package.json
       id: get_version
-      run: echo "::set-output name=version::$(jq -r '.version' package.json)"
+      run: echo "::set-output name=version::$(grep -o -P '(?<=__version__ = ")[^"]*' gymmgt.__init__.py)"
 
     - name: Create tag
       run: |
