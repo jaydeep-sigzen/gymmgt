@@ -1,65 +1,74 @@
 name: Release Workflow
-
-on:
+'on':
   pull_request:
     types:
       - closed
-
 jobs:
   release:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
           python-version: 3.x
-
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt  # Adjust based on your project's dependencies
+
+          pip install -r requirements.txt  # Adjust based on your project's
+          dependencies
       - name: Install hub
         run: |
-          sudo snap install hub --classic  # Adjust based on your GitHub Actions environment
-
+          sudo snap install hub --classic  # Adjust based on your GitHub Actions
+          environment
       - name: Get current version
         id: get_version
-        run: echo "version=$(grep -Po "(?<=__version__ = ')[^']+" ./gymmgt/__init__.py)" >> $GITHUB_OUTPUT
-
+        run: |
+          echo "version=$(grep -Po "(?<=__version__ = ')[^']+"
+          ./gymmgt/__init__.py)" >> $GITHUB_OUTPUT
       - name: Get previous tag
         id: get_previous_tag
         run: |
-          previous_tag=$(git describe --abbrev=0 --tags $(git rev-list --tags --skip=1 --max-count=1))
-          echo "previous_tag=$previous_tag" >> $GITHUB_OUTPUT
+          previous_tag=$(git describe --abbrev=0 --tags $(git rev-list --tags
+          --skip=1 --max-count=1))
 
+          echo "previous_tag=$previous_tag" >> $GITHUB_OUTPUT
       - name: Create tag and release
         id: create_release
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
         run: |
           version=${{ steps.get_version.outputs.version }}
+
           previous_tag=${{ steps.get_previous_tag.outputs.previous_tag }}
+
           tag_prefix=""
+
           case $version in
             *dev*)
               tag_prefix="alpha"
               ;;
           esac
+
           tag="$version"
 
+
           git config --local user.email "jaydeep@sigzen.com"
+
           git config --local user.name "jaydeep-sigzen"
 
+
           git tag $tag
+
           git push origin $tag
 
-        #   changelog_url="https://github.com/jaydeep-sigzen/gymmgt/compare"  # Replace with your actual changelog URL
-          changelog_url="https://github.com/jaydeep-sigzen/gymmgt/compare/$previous_tag...$version"  # Replace with your actual changelog URL
-          body="Changelog: [$changelog_url]($changelog_url)"
-          
-          hub release create -m "Release $tag" -m "$body" $tag
 
+          changelog_url="https://github.com/jaydeep-sigzen/gymmgt/compare/$previous_tag...$version" 
+          # Replace with your actual changelog URL
+
+          body="Changelog: [$changelog_url]($changelog_url)"
+
+
+          hub release create -m "Release $tag" -m "$body" $tag
