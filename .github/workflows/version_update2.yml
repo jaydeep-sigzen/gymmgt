@@ -25,7 +25,6 @@ jobs:
     - name: Bump version
       run: |
         version="${{ steps.get_version.outputs.VERSION_BUMP }}"
-        git pull origin master
         git tag -a ${version}" -m "Version bump: ${version}"
         git push origin ${version}" --tags
 
