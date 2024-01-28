@@ -18,6 +18,11 @@ jobs:
         git config --local user.email "jaydeep@sigzen.com"
         git config --local user.name "GitHub Action"
 
+    - name: Get previous tag
+      id: get_prev_tag
+      run: |
+          echo "prev_tag=$(git describe --tags --abbrev=0 $(git rev-list --tags --skip=1 --max-count=1))" >> $GITHUB_OUTPUT
+
     - name: Get version from __init__ file
       id: get_version
       run: echo "VERSION_BUMP=$(grep -Po "(?<=__version__ = ')[^']+" ./gymmgt/__init__.py)" >> $GITHUB_OUTPUT
@@ -34,22 +39,18 @@ jobs:
       id: create_release
       uses: actions/create-release@v1
       with:
-        tag_name: ${{ steps.get_version.outputs.VERSION_BUMP }}"
-        release_name: Release ${{ steps.get_version.outputs.VERSION_BUMP }}"
+        tag_name: "${{ steps.get_version.outputs.VERSION_BUMP }}"
+        release_name: Release "${{ steps.get_version.outputs.VERSION_BUMP }}"
         body: |
           Changes in this release:
           - Whatever release notes you want to include
 
-    - name: Get previous tag
-      id: get_prev_tag
-      run: |
-        echo "prev_tag=$(git describe --tags --abbrev=0 $(git rev-list --tags --skip=1 --max-count=1))" >> $GITHUB_OUTPUT
 
     - name: Create release note from comparison
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         previous_tag="${{ steps.get_prev_tag.outputs.prev_tag }}"
-        current_tag="${{ steps.get_version.outputs.version }}"
+        current_tag="${{ steps.get_version.outputs.VERSION_BUMP }}"
         gh release create "${current_tag}" $(git log --pretty=format:'- [%h] %s (%an)' -- "${previous_tag}".."${current_tag}")
           
