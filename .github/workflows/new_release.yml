@@ -1,0 +1,54 @@
+name: Release Workflow
+
+on:
+  pull_request:
+    types:
+      - closed
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt  # Adjust based on your project's dependencies
+
+      - name: Get current version
+        id: get_version
+        run: echo "version=$(grep -Po "(?<=__version__ = ')[^']+" ./gymmgt/__init__.py)" >> $GITHUB_OUTPUT
+
+      - name: Create tag and release
+        id: create_release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          version=${{ steps.get_version.outputs.version }}
+          tag_prefix=""
+          case $version in
+            *dev*)
+              tag_prefix="alpha"
+              ;;
+          esac
+          tag="${tag_prefix}v$version"
+
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+          git tag $tag
+          git push origin $tag
+
+          changelog_url="https://your-changelog-url.com"  # Replace with your actual changelog URL
+          body="Changelog: [$changelog_url]($changelog_url)"
+          
+          hub release create -m "Release $tag" -m "$body" $tag
+
