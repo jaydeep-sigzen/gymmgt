@@ -1,0 +1,29 @@
+name: Bump Version
+
+on:
+  pull_request:
+    types:
+      - closed
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Git
+      run: |
+        git config --local user.email "jaydeep@sigzen.com"
+        git config --local user.name "GitHub Action"
+
+    - name: Get version from __init__ file
+      id: get_version
+      run: echo "VERSION_BUMP=$(grep -Po "(?<=__version__ = ')[^']+" ./gymmgt/__init__.py)" >> $GITHUB_OUTPUT
+
+    - name: Bump version
+      run: |
+        version="${{ steps.get_version.outputs.VERSION_BUMP }}"
+        git tag -a "${version}" -m "Version bump: ${version}"
+        git push origin "${version}" 
