@@ -22,6 +22,9 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt  # Adjust based on your project's dependencies
+      - name: Install hub
+        run: |
+          sudo snap install hub --classic  # Adjust based on your GitHub Actions environment
 
       - name: Get current version
         id: get_version
