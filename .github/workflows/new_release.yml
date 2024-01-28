@@ -32,7 +32,7 @@ jobs:
         run: |
           tags=$(git tag -l)
           if [ -z "$tags" ]; then
-            echo "previous_tag=0.0.5" >> $GITHUB_OUTPUT  # Set a default version if no tags are available
+            echo "previous_tag=0.0.6" >> $GITHUB_OUTPUT  # Set a default version if no tags are available
           else
             previous_tag=$(git describe --abbrev=0 --tags $(git rev-list --tags --skip=1 --max-count=1))
             echo "previous_tag=$previous_tag" >> $GITHUB_OUTPUT
