@@ -42,15 +42,15 @@ jobs:
               tag_prefix="alpha"
               ;;
           esac
-          tag="${tag_prefix}v$version"
+          tag="$version"
 
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
+          git config --local user.email "jaydeep@sigzen.com"
+          git config --local user.name "jaydeep-sigzen"
 
           git tag $tag
           git push origin $tag
 
-          changelog_url="https://your-changelog-url.com"  # Replace with your actual changelog URL
+          changelog_url="https://github.com/jaydeep-sigzen/gymmgt/compare"  # Replace with your actual changelog URL
           body="Changelog: [$changelog_url]($changelog_url)"
           
           hub release create -m "Release $tag" -m "$body" $tag
