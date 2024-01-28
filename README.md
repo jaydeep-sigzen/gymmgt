@@ -10,6 +10,7 @@ ERPNext: v14.23.0 (version-14)
 Frappe Framework: v14.34.0 (version-14)
 Gym Management: v0.0.1
 
+
 #### Role Created
 Gym Admin
 Gym Trainer
