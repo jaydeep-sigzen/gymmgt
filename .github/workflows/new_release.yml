@@ -31,7 +31,7 @@ jobs:
         id: get_previous_tag
         run: |
           tags=$(git tag -l)
-          previous_tag=$(curl -s "https://api.github.com/repos/jaydeep-sigzen/${{ github.repository }}/tags" -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" | jq -r '.[1].name // empty')
+          previous_tag=$(curl -s "https://api.github.com/repos/jaydeep-sigzen/${{ github.repository }}/tags" -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" | jq -r '.[0].name // empty')
           echo "previous_tag=$previous_tag"
 
       - name: Create tag and release
