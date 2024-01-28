@@ -6,9 +6,6 @@ A gym management system is a software application designed to help gym owners an
 #### License
 MIT
 
-
-
-
 #### Version Dependancy
 ERPNext: v14.23.0 (version-14)
 Frappe Framework: v14.34.0 (version-14)
