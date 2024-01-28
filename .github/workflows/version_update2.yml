@@ -1,0 +1,61 @@
+name: Release Workflow
+
+on:
+  pull_request:
+    types:
+      - closed
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Git
+      run: |
+        git config --local user.email "jaydeep@sigzen.com"
+        git config --local user.name "GitHub Action"
+
+    - name: Get version from __init__ file
+      id: get_version
+      run: echo "VERSION_BUMP=$(grep -Po "(?<=__version__ = ')[^']+" ./gymmgt/__init__.py)" >> $GITHUB_OUTPUT
+
+    - name: Bump version
+      run: |
+        git pull origin master
+        git tag -a ${{ github.event.pull_request.head.ref }} -m "Version bump: ${{ env.VERSION_BUMP }}"
+        git push origin ${{ github.event.pull_request.head.ref }} --tags
+
+    - name: Create release
+      id: create_release
+      uses: actions/create-release@v1
+      with:
+        tag_name: ${{ github.event.pull_request.head.ref }}
+        release_name: Release ${{ github.event.pull_request.head.ref }}
+        body: |
+          Changes in this release:
+          - Whatever release notes you want to include
+
+    - name: Get the URL of the created release
+      id: get_release_url
+      run: echo "RELEASE_URL=${{ steps.create_release.outputs.upload_url }}" >> $GITHUB_ENV
+
+    - name: Comment on the Pull Request
+      uses: actions/github-script@v7
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        script: |
+          const fs = require('fs');
+          const releaseUrl = process.env.RELEASE_URL;
+          const prNumber = context.payload.pull_request.number;
+          const body = fs.readFileSync(process.env.GITHUB_EVENT_PATH, 'utf8');
+          const prAuthor = JSON.parse(body).pull_request.user.login;
+
+          github.issues.createComment({
+            issue_number: prNumber,
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            body: `@${prAuthor} The release is ready! [View Release](${releaseUrl})`
+          });
