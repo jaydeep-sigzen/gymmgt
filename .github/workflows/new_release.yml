@@ -31,12 +31,8 @@ jobs:
         id: get_previous_tag
         run: |
           tags=$(git tag -l)
-          if [ -z "$tags" ]; then
-            echo "previous_tag=0.0.6" >> $GITHUB_OUTPUT  # Set a default version if no tags are available
-          else
-            previous_tag=$(git describe --abbrev=0 --tags $(git rev-list --tags --skip=1 --max-count=1))
-            echo "previous_tag=$previous_tag" >> $GITHUB_OUTPUT
-          fi
+          previous_tag=$(echo "$tags" | awk '{if(NR==1)print $1; else print prev" "$1; prev=$1}')
+          echo "::set-output name=previous_tag::$previous_tag"
 
       - name: Create tag and release
         id: create_release
