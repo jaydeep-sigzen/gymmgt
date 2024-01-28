@@ -15,8 +15,6 @@ Gym Admin
 Gym Trainer
 Gym Member
 
-
-
 #### Role Profile Created
 Gym Trainer
 
