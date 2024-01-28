@@ -30,7 +30,7 @@ jobs:
       - name: Get previous tag
         id: get_previous_tag
         run: |
-          tags=$(curl -s "https://api.github.com/repos/jaydeep-sigzen/${{ github.repository }}/tags" -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}")
+          tags=$(curl -s "https://api.github.com/repos/${{ github.repository }}/tags" -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}")
           echo "tags=$tags"
           previous_tag=$(echo "$tags" | grep -oP '(?<="name": ")[^"]+' | head -n 1)
           echo "previous_tag=$previous_tag"
