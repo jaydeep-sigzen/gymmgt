@@ -30,12 +30,19 @@ jobs:
         id: get_version
         run: echo "version=$(grep -Po "(?<=__version__ = ')[^']+" ./gymmgt/__init__.py)" >> $GITHUB_OUTPUT
 
+      - name: Get previous tag
+        id: get_previous_tag
+        run: |
+          previous_tag=$(git describe --abbrev=0 --tags $(git rev-list --tags --skip=1 --max-count=1))
+          echo "previous_tag=$previous_tag" >> $GITHUB_OUTPUT
+
       - name: Create tag and release
         id: create_release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           version=${{ steps.get_version.outputs.version }}
+          previous_tag=${{ steps.get_previous_tag.outputs.previous_tag }}
           tag_prefix=""
           case $version in
             *dev*)
@@ -50,7 +57,8 @@ jobs:
           git tag $tag
           git push origin $tag
 
-          changelog_url="https://github.com/jaydeep-sigzen/gymmgt/compare"  # Replace with your actual changelog URL
+        #   changelog_url="https://github.com/jaydeep-sigzen/gymmgt/compare"  # Replace with your actual changelog URL
+          changelog_url="https://github.com/jaydeep-sigzen/gymmgt/compare/$previous_tag...$version"  # Replace with your actual changelog URL
           body="Changelog: [$changelog_url]($changelog_url)"
           
           hub release create -m "Release $tag" -m "$body" $tag
