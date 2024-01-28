@@ -30,7 +30,7 @@ jobs:
           git config --global user.email "jaydeep@sigzen.com"
           git config --global user.name "jaydeep-sigzen"
           git commit -m "Update version [skip ci]"
-          git push
+          git push -f origin master
 
       - name: Get current version
         id: get_version
