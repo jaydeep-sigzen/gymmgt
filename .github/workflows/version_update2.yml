@@ -25,8 +25,8 @@ jobs:
     - name: Bump version
       run: |
         git pull origin master
-        git tag -a ${{ github.event.pull_request.head.ref }} -m "Version bump: ${{ env.VERSION_BUMP }}"
-        git push origin ${{ github.event.pull_request.head.ref }} --tags
+        git tag -a ${{ env.VERSION_BUMP }}" -m "Version bump: ${{ env.VERSION_BUMP }}"
+        git push origin ${{ env.VERSION_BUMP }}" --tags
 
     - name: Create release
       env:
@@ -34,8 +34,8 @@ jobs:
       id: create_release
       uses: actions/create-release@v1
       with:
-        tag_name: ${{ github.event.pull_request.head.ref }}
-        release_name: Release ${{ github.event.pull_request.head.ref }}
+        tag_name: ${{ env.VERSION_BUMP }}"
+        release_name: Release ${{ env.VERSION_BUMP }}"
         body: |
           Changes in this release:
           - Whatever release notes you want to include
