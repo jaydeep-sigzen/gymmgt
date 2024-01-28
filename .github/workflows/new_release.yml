@@ -26,7 +26,7 @@ jobs:
         run: |
           # Replace 'your_version_bump_script.py' with the script that updates the version
           python ./version_bump_script.py
-          git add __init__.py
+          git add ./gymmgt/__init__.py
           git config --global user.email "jaydeep@sigzen.com"
           git config --global user.name "jaydeep-sigzen"
           git commit -m "Update version [skip ci]"
