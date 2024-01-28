@@ -29,13 +29,14 @@ jobs:
         run: |
           version="${{ steps.get_version.outputs.VERSION_BUMP }}"
           git tag -a "${version}" -m "Version bump: ${version}"
-          git push origin "${version}
+          git push origin "${version}"
 
       - name: Changelog
         uses: Bullrich/generate-release-changelog@master
         id: Changelog
         env:
           REPO: ${{ github.repository }}
+
       - name: Create Release
         id: create_release
         uses: actions/create-release@latest
