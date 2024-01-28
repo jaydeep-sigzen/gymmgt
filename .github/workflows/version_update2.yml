@@ -32,6 +32,7 @@ jobs:
       id: create_release
       uses: actions/create-release@v1
       with:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         tag_name: ${{ github.event.pull_request.head.ref }}
         release_name: Release ${{ github.event.pull_request.head.ref }}
         body: |
