@@ -12,6 +12,8 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
 
     - name: Set up Git
       run: |
@@ -28,11 +30,7 @@ jobs:
         git tag -a "${version}" -m "Version bump: ${version}"
         git push origin "${version}"
         
-    - name: Checkout code
-      uses: actions/checkout@v2
-      with:
-        fetch-depth: 0
-        
+
     - name: Changelog
       uses: Bullrich/generate-release-changelog@master
       id: Changelog
