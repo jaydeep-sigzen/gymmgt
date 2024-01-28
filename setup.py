@@ -6,6 +6,7 @@ with open("requirements.txt") as f:
 # get version from __version__ variable in gymmgt/__init__.py
 from gymmgt import __version__ as version
 
+
 setup(
 	name="gymmgt",
 	version=version,
