@@ -32,7 +32,7 @@ jobs:
         run: |
           tags=$(git tag -l)
           previous_tag=$(echo "$tags" | awk '{if(NR==1)print $1; else print prev" "$1; prev=$1}')
-          echo "::set-output name=previous_tag::$previous_tag"
+          echo "previous_tag=$previous_tag"
 
       - name: Create tag and release
         id: create_release
