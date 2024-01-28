@@ -33,7 +33,7 @@ jobs:
           tags=$(curl -s "https://api.github.com/repos/${{ github.repository }}/tags" -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}")
           echo "tags=$tags"
           previous_tag=$(echo "$tags" | grep -oP '(?<="name": ")[^"]+' | head -n 1)
-          echo "previous_tag=$previous_tag"
+          echo "previous_tag=$previous_tag" >> $GITHUB_OUTPUT
 
       - name: Create tag and release
         id: create_release
