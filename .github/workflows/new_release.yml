@@ -22,6 +22,16 @@ jobs:
         run: |
           sudo snap install hub --classic  # Adjust based on your GitHub Actions environment
 
+      - name: Update version in __init__.py
+        run: |
+          # Replace 'your_version_bump_script.py' with the script that updates the version
+          python ./version_bump_script.py
+          git add __init__.py
+          git config --global user.email "jaydeep@sigzen.com"
+          git config --global user.name "jaydeep-sigzen"
+          git commit -m "Update version [skip ci]"
+          git push
+
       - name: Get current version
         id: get_version
         run: |
