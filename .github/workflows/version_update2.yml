@@ -20,8 +20,7 @@ jobs:
 
     - name: Get previous tag
       id: get_prev_tag
-      run: |
-          echo "prev_tag=$(git describe --tags --abbrev=0 $(git rev-list --tags --skip=1 --max-count=1))" >> $GITHUB_OUTPUT
+      run: echo "prev_tag=$(git describe --tags --abbrev=0 HEAD^)" >> $GITHUB_OUTPUT
 
     - name: Get version from __init__ file
       id: get_version
@@ -30,6 +29,7 @@ jobs:
     - name: Bump version
       run: |
         version="${{ steps.get_version.outputs.VERSION_BUMP }}"
+        pre_ver = "${{ steps.get_prev_tag.outputs.prev_tag}}"
         git tag -a "${version}" -m "Version bump: ${version}"
         git push origin "${version}" 
 
