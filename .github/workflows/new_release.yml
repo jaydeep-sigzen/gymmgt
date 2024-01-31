@@ -60,8 +60,7 @@ jobs:
           git tag $tag
           git push origin $tag
 
-
-          changelog_url="https://github.com/jaydeep-sigzen/gymmgt/compare/$previous_tag...$version" 
+          changelog_url="https://github.com/Sigzen-Team/erp_gold/compare/$previous_tag...$version" 
           # Replace with your actual changelog URL
 
           body="Changelog: [$changelog_url]($changelog_url)"
