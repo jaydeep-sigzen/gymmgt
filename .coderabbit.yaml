@@ -15,3 +15,7 @@ reviews:
     drafts: false
 chat:
   auto_reply: true
+base_branches:
+  - "develop"
+  - "master"
+  - "feat/.*"
