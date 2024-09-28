@@ -2,6 +2,8 @@
 
 A gym management system is a software application designed to help gym owners and managers streamline their operations and manage day-to-day tasks. This may include things like membership management, scheduling, billing and payments, facility and equipment management, and reporting and analytics.
 
+GIT
+
 #Update Bump Version
 #### License
 MIT
@@ -50,8 +52,5 @@ bench --site *site_name* migrate
 ![Screenshot from 2023-05-02 13-21-05](https://user-images.githubusercontent.com/127377825/235610187-bd01dabf-612c-45be-8621-f9220fbbb83f.png)
 
 4> Now Gym Admin have all access for the Gym Managment.
-
-Note - After successfully add Gym Member Or Gym Trainer we have to manualu create user by click Create button on top of created user details.
-
 
 
